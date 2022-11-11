@@ -9,7 +9,7 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res)=> {
-    res.render('index', {title: 'final project homepage'});
+    res.render('index', {title: 'final project homepage', data: ['Martin Jaakola', 'Dang Vu Quang', 'Noellar Kappa', 'Guy Lawrence']});
 });
 
 app.listen(PORT, ()=> {
