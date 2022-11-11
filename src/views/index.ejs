@@ -1,5 +1,15 @@
 <head>
     <body>
-        This is our <%=title%>
+        <h1>
+            This is our <%=title%>
+        </h1>
+        <p>Project members</p>
+        <ul>
+            <% data.map((i)=> {
+                %><li><%=i%></li><%
+            })
+
+            %>
+        </ul>
     </body>
 </head>
