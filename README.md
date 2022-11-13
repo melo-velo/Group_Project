@@ -1,5 +1,5 @@
 # itemize
-High value item inventory tracker website for UST SEIS 630-01
+High value item inventory tracker website for UST SEIS 622-01
 
 In order to run the project and test out the website, run the following steps after cloning the repo:
 
