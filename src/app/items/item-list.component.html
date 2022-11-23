@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-      Item list
+      {{pageHeader}}
   </div>
   <div class="card-body">
     <div class="row">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table" *ngIf="highValueItems.length">
         <thead>
           <tr>
             <th>
@@ -18,7 +18,6 @@
                 Add Item
               </button>
             </th>
-            <img src="\assets\images\Martin.jpg" width="50" height="50">
             <th>Product Id</th>
             <th>Name</th>
             <th>Cost</th>
@@ -28,7 +27,21 @@
           </tr>
         </thead>
         <tbody>
-
+          <tr *ngFor="let item of highValueItems">
+            <td>
+              <img [src]="item.imageUrl"
+                    [title]="item.productName"
+                    [style.width.px]="imgWidth"
+                    [style.margin.px]="imgMargin">
+            </td>
+            <td>{{item.productName}}</td>
+            <td>{{item.productId}}</td>
+            <td>{{item.purchasePrice}}</td>
+            <td>{{item.purchaseLocation}}</td>
+            <td>{{item.datePurchased}}</td>
+            <td>{{item.condition}}</td>
+            <td>{{item.category}}</td>
+          </tr>
         </tbody>
       </table>
     </div>
