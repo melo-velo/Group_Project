@@ -1,6 +1,8 @@
 # Itemize
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+This project is for a class assignment in web development for SEIS-622-01, Spring of 2022. 
+This purpose of the website is to be a high-valu item inventory tracker. 
 
 ## Development server
 
