@@ -1,15 +1,29 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { IItem } from "./item";
 
 @Component({
   selector: 'itemized-list',
-  templateUrl: './item-list.component.html'
+  templateUrl: './item-list.component.html',
+  styleUrls: ['./item-list.component.css']
 })
-export class ItemListComponent {
+export class ItemListComponent implements OnInit {
   pageHeader: string = 'Item List';
   imgWidth = 50;
   imgMargin = 2;
+  //listFilter: string = 'item';
 
-  highValueItems: any[] = [
+  private _listFilter: string = '';
+
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set listFilter(value: string) {
+    this._listFilter = value;
+    console.log('In setter');
+  }
+
+  highValueItems: IItem[] = [
     {
       "imageUrl": "assets/images/Martin.jpg",
       "productName": "Guitar",
@@ -31,4 +45,12 @@ export class ItemListComponent {
       "category": "Sports Equipment"
     }
   ];
+
+  /*toggleButton(): void {
+    this.showImage = !this.showImage;
+  }*/
+
+  ngOnInit(): void {
+    this.listFilter = 'item';
+  }
 }
