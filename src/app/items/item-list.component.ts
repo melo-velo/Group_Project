@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IItem } from "./item";
+import { ItemService } from "./item.service";
 
 @Component({
   selector: 'itemized-list',
@@ -26,28 +27,9 @@ export class ItemListComponent implements OnInit {
 
   filteredItems: IItem[] = [];
 
-  highValueItems: IItem[] = [
-    {
-      "imageUrl": "assets/images/Martin.jpg",
-      "productName": "Guitar",
-      "productId": "567-797372-IBN",
-      "purchasePrice": 400,
-      "purchaseLocation": "Guitar Center",
-      "datePurchased": "May 5, 2018",
-      "condition": "Mint",
-      "category": "Instruments"
-    },
-    {
-      "imageUrl": "assets/images/bike.png",
-      "productName": "Bike",
-      "productId": "590-7943372-COL",
-      "purchasePrice": 2000,
-      "purchaseLocation": "Angry Catfish",
-      "datePurchased": "March 7, 2009",
-      "condition": "Used",
-      "category": "Sports Equipment"
-    }
-  ];
+  highValueItems: IItem[] = [];
+
+  constructor(private itemService: ItemService) {}
 
   runFilterOnItems(runFilter: string): IItem[] {
     runFilter = runFilter.toLowerCase();
@@ -60,6 +42,7 @@ export class ItemListComponent implements OnInit {
   }*/
 
   ngOnInit(): void {
-    this.listFilter = 'guitar';
+    this.highValueItems = this.itemService.getItems();
+    this.filteredItems = this.highValueItems;
   }
 }
