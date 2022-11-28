@@ -21,7 +21,10 @@ export class ItemListComponent implements OnInit {
   set listFilter(value: string) {
     this._listFilter = value;
     console.log('In setter');
+    this.filteredItems = this.runFilterOnItems(value);
   }
+
+  filteredItems: IItem[] = [];
 
   highValueItems: IItem[] = [
     {
@@ -46,11 +49,17 @@ export class ItemListComponent implements OnInit {
     }
   ];
 
+  runFilterOnItems(runFilter: string): IItem[] {
+    runFilter = runFilter.toLowerCase();
+    return this.highValueItems.filter((item: IItem) =>
+    item.productName.toLocaleLowerCase().includes(runFilter));
+  }
+
   /*toggleButton(): void {
     this.showImage = !this.showImage;
   }*/
 
   ngOnInit(): void {
-    this.listFilter = 'item';
+    this.listFilter = 'guitar';
   }
 }
