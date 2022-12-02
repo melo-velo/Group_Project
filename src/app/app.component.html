@@ -1,14 +1,9 @@
-<main>
-  <pm-sidebar></pm-sidebar>
+<pm-view-header></pm-view-header>
+
+<div class="main">
+  <pm-view-sidebar></pm-view-sidebar>
   <div>
-    <h1>{{pageHeader}}</h1>
-    <div>Project members: </div>
-    <ul>
-      <li>Martin Jaakola</li>
-      <li>Dang Dang</li>
-      <li>Noellar Kappa</li>
-      <li>Guy Lawrence</li>
-    </ul>
-    <itemized-list></itemized-list>
+    <router-outlet></router-outlet>
   </div>
-</main>
+</div>
+
