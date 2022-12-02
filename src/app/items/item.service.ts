@@ -1,45 +1,41 @@
 import { Injectable } from "@angular/core";
 import { IItem } from "./item";
-
+import list from '../../assets/json/list.json';
+//import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemService {
 
+  private url:string = "http://localhost:4201";
+
+  //constructor(private http: HttpClient){}
+
   getItems(): IItem[] {
-    return [
-      {
-        "imageUrl": "assets/images/Martin.jpg",
-        "productName": "Guitar",
-        "productId": "567-797372-IBN",
-        "purchasePrice": 400,
-        "purchaseLocation": "Guitar Center",
-        "datePurchased": "May 5, 2018",
-        "condition": "Mint",
-        "category": "Instruments"
-      },
-      {
-        "imageUrl": "assets/images/bike.png",
-        "productName": "Bike",
-        "productId": "590-7943372-COL",
-        "purchasePrice": 2000,
-        "purchaseLocation": "Angry Catfish",
-        "datePurchased": "March 7, 2009",
-        "condition": "Used",
-        "category": "Sports Equipment"
-      },
-      {
-        "imageUrl": "assets/images/camera.jpg",
-        "productName": "Camera",
-        "productId": "780-73643012-UAD",
-        "purchasePrice": 785,
-        "purchaseLocation": "Best Buy",
-        "datePurchased": "January 2, 2014",
-        "condition": "Good",
-        "category": "Electronics"
-      }
-    ]
+  
+    /* work in progress, return the local file so we don't break the rest of the team */
+    //let remoteList = this.http.request('get', this.url);
+    //console.log(remoteList);
+  
+    return list;
   }
+
+  addItem(/* listName:IList,*/ newItem:IItem)
+  {
+//    console.log(JSON.stringify(newItem));
+//    return this.http.request('post', JSON.stringify(newItem));
+  }
+  
+  //  getItem(/* listName:IList,*/ id:string){}
+
+  //  updateItem(/* listName:IList,*/ id:string){}
+  
+  //  createNewList( listName:IList ){}
+
+  //  deleteItem(/* listName:IList,*/ id:string){}
+
+  //  deleteList(listName:IList){}
+
 
 }

@@ -1,4 +1,5 @@
 export interface IItem {
+//      id: string;
       imageUrl: string;
       productName: string;
       productId: string;
