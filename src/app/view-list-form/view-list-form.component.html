@@ -1,0 +1,74 @@
+<div class="list-form">
+  <h1>Add new item</h1>
+
+  <form class="list">
+    <table class="list-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>ID</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Price</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Location</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Date</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Condition</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="list-full-width">
+            <mat-label>Category</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <button mat-raised-button color="primary" class="add-button" type="submit">Add</button>
+    <button [routerLink]="['/list']" mat-raised-button color="warn" class="cancel-button">Cancel</button>
+  </form>
+</div>
+
