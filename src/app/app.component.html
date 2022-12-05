@@ -1,9 +1,13 @@
 <pm-view-header></pm-view-header>
 
-<div class="main">
-  <pm-view-sidebar></pm-view-sidebar>
-  <div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <pm-view-sidebar></pm-view-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
     <router-outlet></router-outlet>
-  </div>
-</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
 

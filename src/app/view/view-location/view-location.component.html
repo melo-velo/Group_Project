@@ -1,0 +1,14 @@
+<div>
+  <button [routerLink]="['/location-form']" mat-flat-button color="primary" class="button-add-location">Create new list</button>
+</div>
+
+<cdk-virtual-scroll-viewport itemSize="100" class="location-viewport">
+  <div class="place-card-container">
+    <pm-view-location-card></pm-view-location-card>
+    <pm-view-location-card></pm-view-location-card>
+    <pm-view-location-card></pm-view-location-card>
+    <pm-view-location-card></pm-view-location-card>
+    <pm-view-location-card></pm-view-location-card>
+    <pm-view-location-card></pm-view-location-card>
+  </div>
+</cdk-virtual-scroll-viewport>
