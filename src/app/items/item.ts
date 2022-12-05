@@ -1,5 +1,5 @@
 export interface IItem {
-//      id: string;
+//      iid: string;
       imageUrl: string;
       productName: string;
       productId: string;
@@ -8,4 +8,12 @@ export interface IItem {
       datePurchased: string;
       condition: string;
       category: string;
-}
+};
+
+export interface IList {
+      listid: number;
+      listname: string;
+      listaddress:string,
+      coverimageurl:string,
+      items:IItem[];
+};
