@@ -1,8 +1,9 @@
-import { Injectable } from "@angular/core";
+import { Injectable, NgModule } from "@angular/core";
 import { IItem, IList } from "../items/item";
 import list from '../../assets/json/list.json';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule, HttpParams } from '@angular/common/http';
 import { getMultipleValuesInSingleSelectionError } from "@angular/cdk/collections";
+import { BrowserModule } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,10 @@ import { getMultipleValuesInSingleSelectionError } from "@angular/cdk/collection
 export class ItemService {
 
   private url:string = "http://localhost:4201";
-  
+ 
   constructor(private http: HttpClient){}
 
-  private async delay(ms: number) {
-    await new Promise<void>(resolve => setTimeout(()=>resolve(), ms)).then(()=>console.log("fired"));
-  }
-
+  // Legacy function, gets the initial JSON, will remove soon.
   getItems(): IItem[] {
   
     /* work in progress, return the local file so we don't break the rest of the team */
@@ -25,43 +23,16 @@ export class ItemService {
   
     return list;
   }
-
-  private loadMetaData(retVal:IList[]){
-    console.log("Entering loadMetaData()");
-    const options = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }),
-    };
-
-    this.http.get<any>(this.url, options)
-      .subscribe({
-        next: (data) => {
-          console.log("LMD: " + data);
-          retVal = JSON.parse(JSON.stringify(data));
-        },
-        error: (err) => {
-          console.error("Error occurred: " + err);
-        }
-      });
-  }
-  async getListMetadata(): Promise<IList[]> {
-
-    console.log("Entering getListMetadata()");
-
-    let retVal:IList[] = [];
-
-    if (retVal.length == 0)
-    {
-      await this.loadMetaData(retVal);
-    }
-
-    console.log("getListMetadata returning: " + retVal);
-    return retVal;
+  getListItems(listName:string) {
+    console.log("getListItems: " + listName);
+    
+    return this.http.get(this.url + '/' + listName);
   }
 
-
+  getListMetadata() {
+    // The Express backend default GET (no parameters) returns the List Of Lists without the actual list items
+    return this.http.get(this.url);
+  }
 
   addItem(/* listName:IList,*/ newItem:IItem)
   {
