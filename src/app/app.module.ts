@@ -13,6 +13,8 @@ import { ViewHeaderComponent } from './view-header/view-header.component';
 import { ViewSidebarComponent } from './view-sidebar/view-sidebar.component';
 import { ViewLocationCardComponent } from './view-location-card/view-location-card.component';
 import { ViewHomeComponent } from './view-home/view-home.component';
+import { LoginComponent } from './login/login.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { ViewHomeComponent } from './view-home/view-home.component';
     ViewSidebarComponent,
     ViewLocationCardComponent,
     ViewHomeComponent,
+    LoginComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
