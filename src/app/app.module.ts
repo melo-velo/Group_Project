@@ -23,6 +23,8 @@ import {MatTableModule} from '@angular/material/table';
 import { ViewListFormComponent } from './view/view-list-form/view-list-form.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     ViewLocationFormComponent,
     ViewItemComponent,
     ViewListFormComponent,
+    LoginComponent,
+    CreateaccountComponent,
   ],
   imports: [
     BrowserModule,
