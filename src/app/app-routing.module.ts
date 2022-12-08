@@ -7,6 +7,8 @@ import {ViewItemComponent} from "./view/view-item/view-item.component";
 import {ViewListFormComponent} from "./view/view-list-form/view-list-form.component";
 import { ViewLocationResolver } from "./view/view-location/view-location.resolver";
 import { ViewItemResolver } from "./view/view-item/view-item.resolver";
+import { LoginComponent } from './login/login.component';
+import { CreateaccountComponent } from './createaccount/createaccount.component';
 
 const routes: Routes = [
   {path: 'home', component: ViewHomeComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}},
   {path: 'location-form', component: ViewLocationFormComponent},
   {path: 'list-form', component: ViewListFormComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'createaccount', component: CreateaccountComponent},
   {path: '', redirectTo: 'home', pathMatch: "full"}
 ];
 
