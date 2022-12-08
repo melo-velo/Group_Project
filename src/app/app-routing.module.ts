@@ -5,11 +5,14 @@ import {ViewHomeComponent} from "./view/view-home/view-home.component";
 import {ViewLocationFormComponent} from "./view/view-location-form/view-location-form.component";
 import {ViewItemComponent} from "./view/view-item/view-item.component";
 import {ViewListFormComponent} from "./view/view-list-form/view-list-form.component";
+import { ViewLocationResolver } from "./view/view-location/view-location.resolver";
+import { ViewItemResolver } from "./view/view-item/view-item.resolver";
 
 const routes: Routes = [
   {path: 'home', component: ViewHomeComponent},
-  {path: 'dashboard', component: ViewLocationComponent},
-  {path: 'list', component: ViewItemComponent},
+  {path: 'dashboard', component: ViewLocationComponent, resolve: {metaData: ViewLocationResolver}},
+  // {path: 'list', component: ViewItemComponent},
+  {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}},
   {path: 'location-form', component: ViewLocationFormComponent},
   {path: 'list-form', component: ViewListFormComponent},
   {path: '', redirectTo: 'home', pathMatch: "full"}

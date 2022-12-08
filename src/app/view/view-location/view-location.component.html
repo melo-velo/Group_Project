@@ -4,11 +4,15 @@
 
 <cdk-virtual-scroll-viewport itemSize="100" class="location-viewport">
   <div class="place-card-container">
+    <ng-container *ngFor="let lst of listMetadata">
+      <pm-view-location-card *ngIf="listMetadata" [item]="lst"></pm-view-location-card>
+    </ng-container>    
+    <!--
     <pm-view-location-card></pm-view-location-card>
     <pm-view-location-card></pm-view-location-card>
     <pm-view-location-card></pm-view-location-card>
     <pm-view-location-card></pm-view-location-card>
     <pm-view-location-card></pm-view-location-card>
-    <pm-view-location-card></pm-view-location-card>
-  </div>
+    -->
+</div>
 </cdk-virtual-scroll-viewport>

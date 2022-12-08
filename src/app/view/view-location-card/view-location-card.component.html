@@ -3,12 +3,18 @@
     <button mat-raised-button class="button-edit">EDIT</button>
     <button mat-raised-button color="warn" class="button-delete">DELETE</button>
   </mat-card-actions>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+  <ng-template [ngIf]="itemUrl.length > 0" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock" ></ng-template>
+  <ng-template #thenBlock>
+    <img mat-card-image src="{{itemUrl}}" alt="">
+  </ng-template>
+  <ng-template #elseBlock>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+  </ng-template>
   <mat-card-content>
     <h1>{{locationName}}</h1>
     <h2>{{address}}</h2>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary" class="button-show">SHOW LIST</button>
+    <button mat-raised-button color="primary" class="button-show" [routerLink]="['/list/'+itemListName]" routerLinkActive="active">SHOW LIST</button>
   </mat-card-actions>
 </mat-card>

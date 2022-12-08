@@ -27,3 +27,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Extraneous Packages
+/backend is a Express Typescript backend to serve the data. Use the following to create your workspace
+    npm init --y
+    npm install --save-dev typescript @types/node
+    npm install --save-dev ts-node
+    npm install express
+    npm install cors
+    npm install stringify
+    npm install json-stringify-safe
+
+

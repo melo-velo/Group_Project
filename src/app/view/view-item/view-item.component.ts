@@ -1,48 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
-
-
-const ITEM_DATA = [
-  {
-    "imageUrl": "assets/images/Martin.jpg",
-    "productName": "Guitar",
-    "productId": "567-797372-IBN",
-    "purchasePrice": 400,
-    "purchaseLocation": "Guitar Center",
-    "datePurchased": "May 5, 2018",
-    "condition": "Mint",
-    "category": "Instruments"
-  },
-  {
-    "imageUrl": "assets/images/bike.png",
-    "productName": "Bike",
-    "productId": "590-7943372-COL",
-    "purchasePrice": 2000,
-    "purchaseLocation": "Angry Catfish",
-    "datePurchased": "March 7, 2009",
-    "condition": "Used",
-    "category": "Sports Equipment"
-  },
-  {
-    "imageUrl": "assets/images/camera.jpg",
-    "productName": "Camera",
-    "productId": "780-73643012-UAD",
-    "purchasePrice": 785,
-    "purchaseLocation": "Best Buy",
-    "datePurchased": "January 2, 2014",
-    "condition": "Good",
-    "category": "Electronics"
-  }
-];
+import { ActivatedRoute } from '@angular/router';
+import { IList, IItem } from '../../items/item'
 
 @Component({
   selector: 'pm-view-item',
   templateUrl: './view-item.component.html',
   styleUrls: ['./view-item.component.scss']
 })
-export class ViewItemComponent {
+export class ViewItemComponent implements OnInit{
   displayedColumns: string[] = ['imageUrl', 'productName', 'productId', 'purchasePrice', 'purchaseLocation', 'datePurchased', 'condition', 'category', 'actions'];
-  dataSource = new MatTableDataSource(ITEM_DATA);
+  dataSource = new MatTableDataSource<IItem>();
+
+  constructor(private route:ActivatedRoute) {}
+
+  ngOnInit() {
+  //  console.log("view-item ngOnInit()");
+  //  console.log(this.route.snapshot.data['listData']);
+    let rawData:IList = JSON.parse(JSON.stringify(this.route.snapshot.data['listData'])) as IList;
+  //  console.log("view-item: " + JSON.stringify(rawData));
+    this.dataSource = new MatTableDataSource(rawData.items);
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

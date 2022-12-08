@@ -22,7 +22,7 @@ import { ViewItemComponent } from './view/view-item/view-item.component';
 import {MatTableModule} from '@angular/material/table';
 import { ViewListFormComponent } from './view/view-list-form/view-list-form.component';
 
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,7 +48,8 @@ import { ViewListFormComponent } from './view/view-list-form/view-list-form.comp
     MatButtonModule,
     MatInputModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
