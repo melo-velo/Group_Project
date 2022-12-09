@@ -25,6 +25,8 @@ import { ViewListFormComponent } from './view/view-list-form/view-list-form.comp
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { PageInventoryComponent } from './page-inventory/page-inventory.component';
+import { PageHomeComponent } from './page-home/page-home.component';
 
 
 @NgModule({
@@ -41,6 +43,8 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     ViewListFormComponent,
     LoginComponent,
     CreateaccountComponent,
+    PageInventoryComponent,
+    PageHomeComponent,
   ],
   imports: [
     BrowserModule,
