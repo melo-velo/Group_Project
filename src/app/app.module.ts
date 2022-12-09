@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { PageInventoryComponent } from './page-inventory/page-inventory.component';
 import { PageHomeComponent } from './page-home/page-home.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { PageHomeComponent } from './page-home/page-home.component';
     CreateaccountComponent,
     PageInventoryComponent,
     PageHomeComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
