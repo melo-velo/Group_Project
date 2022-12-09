@@ -1,1 +1,93 @@
-<p>Welcome to the about screen! </p>
+<div class="about">
+  <h1><u>About us</u></h1>
+  <br>
+
+  <h2 style="text-align: left">The Team</h2>
+  <p>Here's the team and what we do: </p>
+
+  <div class="row">
+    <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Martin Jaakola</h2>
+            <h5><i>Co-Founder & CTO - Chief Technology Officer</i></h5>
+            <img src="assets\images\team\Developer_Martin.jpg"
+            [style.width.px]="imgWidth"
+            [style.margin.px]="imgMargin">
+            <p><i>Martin co-founded the company in 2022.</i></p>
+            <p>He currently leads development efforts and helps
+              develop new products.</p>
+              <p class="small">Outside of work he like to: </p>
+            <ul>
+              <li class="small">Bike, play music, and rock climb</li>
+              <li class="small">Play music</li>
+              <li class="small">Rock climb</li>
+            </ul>
+            <p class="small"><i>Email: jaak8280@stthomas.edu</i></p>
+          </div>
+          <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Team Member #2</h2>
+          <h5><i>Co-Founder & CTO - Chief Legal Officer</i></h5>
+          <img src="assets\images\team\Developer_team.png"
+          [style.width.px]="imgWidth"
+          [style.margin.px]="imgMargin">
+          <p><i>Decription of role at company here</i></p>
+            <p>Description of day-to-day activity</p>
+              <p class="small">Outside of work he/she/they like to: </p>
+            <ul>
+              <li class="small">List what you like to do here</li>
+            </ul>
+          </div>
+          <button class="button">Contact Info:</button>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Team Member #3</h2>
+          <h5><i>Co-Founder & COO - Chief Operating Officer</i></h5>
+          <img src="assets\images\team\Developer_team.png"
+          [style.width.px]="imgWidth"
+          [style.margin.px]="imgMargin">
+          <p><i>Decription of role at company here</i></p>
+            <p>Description of day-to-day activity</p>
+              <p class="small">Outside of work he/she/they like to: </p>
+            <ul>
+              <li class="small">List what you like to do here</li>
+            </ul>
+          </div>
+          <button class="button">Contact Info:</button>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+          <div class="container">
+          <h5><i>Co-Founder & CEO - Chief Executive Officer</i></h5>
+          <h2>Team Member #4</h2>
+          <img src="assets\images\team\Developer_team.png"
+          [style.width.px]="imgWidth"
+          [style.margin.px]="imgMargin">
+          <p><i>Decription of role at company here</i></p>
+            <p>Description of day-to-day activity</p>
+              <p class="small">Outside of work he/she/they like to: </p>
+            <ul>
+              <li class="small">List what you like to do here</li>
+            </ul>
+          </div>
+          <button class="button">Contact Info:</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
