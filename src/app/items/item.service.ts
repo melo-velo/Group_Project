@@ -1,5 +1,5 @@
 import { Injectable, NgModule } from "@angular/core";
-import { IItem, IList } from "../items/item";
+import { IItem, IList, IDataPacket, OpCodes } from "../items/item";
 import list from '../../assets/json/list.json';
 import { HttpClient, HttpHeaders, HttpClientModule, HttpParams } from '@angular/common/http';
 import { getMultipleValuesInSingleSelectionError } from "@angular/cdk/collections";
@@ -34,17 +34,67 @@ export class ItemService {
     return this.http.get(this.url);
   }
 
-  addItem(/* listName:IList,*/ newItem:IItem)
+  addItem(listName:string, newItem:IItem)
   {
-//    console.log(JSON.stringify(newItem));
-//    return this.http.request('post', JSON.stringify(newItem));
+    let USER_ID = 'GLOBAL';
+
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
+
+    const data:IDataPacket = {
+      opcode: OpCodes.AddItem,
+      user: USER_ID,
+      listName: listName,
+      item: newItem
+    }
+
+    this.http.post<any>(this.url, JSON.stringify(data), options)
+        .subscribe({
+          next: () => {
+            console.log("Call successful");
+          },
+          error: (err) => {
+            console.error("Error occurred: " + err);
+          }
+        });
   }
   
+  createNewList( listName:IList ){
+    let USER_ID = 'GLOBAL';
+
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
+
+    const data:IDataPacket = {
+      opcode: OpCodes.AddList,
+      user: USER_ID,
+      listName: listName.listname,
+      item: listName
+    }
+
+    this.http.post<any>(this.url, JSON.stringify(data), options)
+        .subscribe({
+          next: () => {
+            console.log("Call successful");
+          },
+          error: (err) => {
+            console.error("Error occurred: " + err);
+          }
+        });
+  }
+
   //  getItem(/* listName:IList,*/ id:string){}
 
   //  updateItem(/* listName:IList,*/ id:string){}
   
-  //  createNewList( listName:IList ){}
 
   //  deleteItem(/* listName:IList,*/ id:string){}
 

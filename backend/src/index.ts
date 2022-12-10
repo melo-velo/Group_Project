@@ -16,10 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const filePath = path.join(__dirname, '../data/list.json');
+const fileName = '../data/list.json';
+const filePath = path.join(__dirname, fileName);
 
 // Define how we're going to format the data
-import { IItem, IList } from '../../src/app/items/item';
+import { IItem, IList, IDataPacket, OpCodes } from '../../src/app/items/item';
 
 
 // the local variable to store the data
@@ -69,6 +70,36 @@ app.get('/:listname', (req: any, res: any) => {
     console.log("Returning 404 error.");
     res.status(404);
     return res.json({error: 'No list with name: ' + res.params.listname + ' found!'});
+});
+
+// Post endpoint to add n
+app.post('/', (req: any, res: any) => {
+    let newTransfer:IDataPacket =  JSON.parse(JSON.stringify(req.body)) as IDataPacket;
+
+    console.log("POST xfer: " + JSON.stringify(req.body));
+
+    switch(newTransfer.opcode)
+    {
+        case OpCodes.AddItem:{
+            let subList:IList = lol.find(l => l.listname == newTransfer.listName) as IList;
+            subList.items.push(newTransfer.item as IItem);
+            console.log("addItem: " + JSON.stringify(subList));
+            break;
+        }
+        case OpCodes.AddList:{
+            lol.push(newTransfer.item as IList);
+            break;
+        }
+        default: {
+            console.log("Unrecognized OpCode: " + newTransfer.opcode);
+            res.status(404); // Deliberately chose 405 - Method Not Allowed
+            return res.json({ error: `unrecognized opcode:${newTransfer.opcode}.` });    
+        }
+    }
+
+    fs.writeFileSync(filePath, JSON.stringify(lol, null, 4));
+
+    return res.sendStatus(200);
 });
 
 // Start listening

@@ -29,6 +29,11 @@ import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { PageInventoryComponent } from './page-inventory/page-inventory.component';
 import { PageHomeComponent } from './page-home/page-home.component';
+import { ViewLocationFormEditComponent } from './view/view-location-form-edit/view-location-form-edit.component';
+import { ViewListFormEditComponent } from './view/view-list-form-edit/view-list-form-edit.component';
+import { AboutComponent } from './about/about.component';
+import { HomeCoverComponent } from './home-cover/home-cover.component';
+import { HomeOverviewComponent } from './home-overview/home-overview.component';
 
 const oktaConfig: OktaAuthOptions = {
   issuer: 'https://{dev-13798108.okta.com/oauth2/default}/oauth2/default',
@@ -52,6 +57,11 @@ const oktaConfig: OktaAuthOptions = {
     CreateaccountComponent,
     PageInventoryComponent,
     PageHomeComponent,
+    ViewLocationFormEditComponent,
+    ViewListFormEditComponent,
+    AboutComponent,
+    HomeCoverComponent,
+    HomeOverviewComponent,
   ],
   imports: [
     BrowserModule,

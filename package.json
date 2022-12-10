@@ -23,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.0.0-rc.1",
     "@okta/okta-angular": "^3.0.1",
     "@popperjs/core": "^2.11.6",
+    "angular-mailto": "^0.1.0",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
     "rxjs": "~7.5.0",

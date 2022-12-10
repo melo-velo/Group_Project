@@ -1,61 +1,103 @@
 [
-  {
-    "listid" : 42,
-    "listname" : "Guy-Home",
-    "listaddress": "Northfield, MN",
-    "coverimageurl": "assets/images/Martin.jpg",
-    "items" : [
-        {
-          "imageUrl": "assets/images/Martin.jpg",
-          "productName": "Guitar",
-          "productId": "567-797372-IBN",
-          "purchasePrice": 400,
-          "purchaseLocation": "Guitar Center",
-          "datePurchased": "May 5, 2018",
-          "condition": "Mint",
-          "category": "Instruments"
-        },
-        {
-          "imageUrl": "assets/images/bike.png",
-          "productName": "Bike",
-          "productId": "590-7943372-COL",
-          "purchasePrice": 2000,
-          "purchaseLocation": "Angry Catfish",
-          "datePurchased": "March 7, 2009",
-          "condition": "Used",
-          "category": "Sports Equipment"
-        },
-        {
-          "imageUrl": "assets/images/camera.jpg",
-          "productName": "Camera",
-          "productId": "780-73643012-UAD",
-          "purchasePrice": 785,
-          "purchaseLocation": "Best Buy",
-          "datePurchased": "January 2, 2014",
-          "condition": "Good",
-          "category": "Electronics"
-        }
-      ]
+    {
+        "listid": 42,
+        "listname": "Guy-Home",
+        "listaddress": "Northfield, MN",
+        "coverimageurl": "assets/images/Martin.jpg",
+        "items": [
+            {
+                "imageUrl": "assets/images/Martin.jpg",
+                "productName": "Guitar",
+                "productId": "567-797372-IBN",
+                "purchasePrice": 400,
+                "purchaseLocation": "Guitar Center",
+                "datePurchased": "May 5, 2018",
+                "condition": "Mint",
+                "category": "Instruments"
+            },
+            {
+                "imageUrl": "assets/images/bike.png",
+                "productName": "Bike",
+                "productId": "590-7943372-COL",
+                "purchasePrice": 2000,
+                "purchaseLocation": "Angry Catfish",
+                "datePurchased": "March 7, 2009",
+                "condition": "Used",
+                "category": "Sports Equipment"
+            },
+            {
+                "imageUrl": "assets/images/camera.jpg",
+                "productName": "Camera",
+                "productId": "780-73643012-UAD",
+                "purchasePrice": 785,
+                "purchaseLocation": "Best Buy",
+                "datePurchased": "January 2, 2014",
+                "condition": "Good",
+                "category": "Electronics"
+            },
+            {
+                "imageUrl": "",
+                "productName": "Jedi",
+                "productId": "PR549",
+                "purchasePrice": "5k",
+                "purchaseLocation": "Northfield",
+                "datePurchased": "2/11/17",
+                "condition": "Slightly Used",
+                "category": "Working Dog"
+            }
+        ]
     },
     {
-      "listid" : "23",
-      "listname" : "Noella-Home",
-      "listaddress": "St Paul, MN",
-      "coverimageurl": "",
-      "items" : []
+        "listid": "23",
+        "listname": "Noella-Home",
+        "listaddress": "St Paul, MN",
+        "coverimageurl": "",
+        "items": []
     },
     {
-      "listid" : "35",
-      "listname" : "Martin-Home",
-      "listaddress": "Woodbury, MN",
-      "coverimageurl": "",
-      "items" : []
+        "listid": "35",
+        "listname": "Martin-Home",
+        "listaddress": "Woodbury, MN",
+        "coverimageurl": "",
+        "items": []
     },
     {
-      "listid" : "19",
-      "listname" : "Dang-Home",
-      "listaddress": "St Paul, MN",
-      "coverimageurl": "",
-      "items" : []
+        "listid": "19",
+        "listname": "Dang-Home",
+        "listaddress": "St Paul, MN",
+        "coverimageurl": "",
+        "items": [
+            {
+                "imageUrl": "",
+                "productName": "TV",
+                "productId": "1",
+                "purchasePrice": "300",
+                "purchaseLocation": "Best Buy",
+                "datePurchased": "01/01/2023",
+                "condition": "New",
+                "category": "Electronic"
+            }
+        ]
+    },
+    {
+        "listid": 1,
+        "listname": "Guy-Test2",
+        "listaddress": "Northfield, MN",
+        "coverimageurl": "",
+        "items": []
+    },
+    {
+        "listid": 10,
+        "listname": "Guy-Test3",
+        "listaddress": "Chatfield, Minnesota",
+        "coverimageurl": "",
+        "items": []
+    },
+    {
+        "listid": 3,
+        "listname": "Dang New Home",
+        "listaddress": "Dang New Address",
+        "coverimageurl": "",
+        "items": []
     }
-  ]
+]
