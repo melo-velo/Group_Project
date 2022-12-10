@@ -22,7 +22,7 @@ const routes: Routes = [
     children: [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
-      { path: 'callback', component: OktaCallbackComponent }
+      {path: 'callback', component: OktaCallbackComponent },
       {path: 'about', component: AboutComponent },
       {path: 'home-cover', component: HomeCoverComponent},
       {path: 'home-overview', component: HomeOverviewComponent},
