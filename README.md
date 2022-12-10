@@ -39,3 +39,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     npm install json-stringify-safe
 
 
+# Okta Configuration(MAC)
+
+npm install @okta/okta-angular@3.0.1
+brew install --cask oktadeveloper/tap/okta 
+okta login
+Okta Org URL: (https://dev-13798108.okta.com) 
+okta apps create
+Application name [itemize]: 
+Type of Application
+> 2: Single Page App)
+Enter your choice [Web]: 2   
+Redirect URI
+Enter your Redirect URI(s) [http://localhost:8080/callback]: http://localhost:4200/callback
+Enter your Post Logout Redirect URI(s) [http://localhost:4200/]: 
+Created OIDC application, client-id: 0oa7l1c04dPacXUdY5d7
