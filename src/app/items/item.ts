@@ -17,3 +17,15 @@ export interface IList {
       coverimageurl:string,
       items:IItem[];
 };
+
+export enum OpCodes{
+      AddItem = 1,
+      AddList,
+};
+
+export interface IDataPacket {
+      opcode:OpCodes;
+      user: string;
+      listName: string;
+      item: IItem | IList;
+};

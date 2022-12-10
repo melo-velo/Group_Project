@@ -20,12 +20,19 @@ td {
 }
 
 .add-button {
+  margin-top:20px;
   width: 100px;
+  float: left;
 }
 
 .cancel-button {
+  margin-top:20px;
   width: 100px;
-  margin-left: 10px;
+  float: right;
+}
+#item-pic{
+  width:300px;
+  margin-left: 50px;
 }
 
 

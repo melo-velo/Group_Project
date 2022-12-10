@@ -21,11 +21,11 @@ const routes: Routes = [
 
   {path: 'inventory-page', component: PageInventoryComponent,
     children: [
-      {path: 'dashboard', component: ViewLocationComponent, resolve: {metaData: ViewLocationResolver}},
+      {path: 'dashboard', component: ViewLocationComponent, resolve: {metaData: ViewLocationResolver}, pathMatch: "full"},
       // {path: 'list', component: ViewItemComponent},
-      {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}},
+      {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}, pathMatch: "full"},
       {path: 'location-form', component: ViewLocationFormComponent},
-      {path: 'list-form', component: ViewListFormComponent},
+      {path: 'list-form/:listname', component: ViewListFormComponent, pathMatch: "full"},
     ]
   },
 
