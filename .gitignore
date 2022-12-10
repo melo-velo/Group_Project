@@ -38,6 +38,7 @@ backend/node_modules
 /libpeerconnection.log
 testem.log
 /typings
+.backend/data/list.json
 
 # System files
 .DS_Store

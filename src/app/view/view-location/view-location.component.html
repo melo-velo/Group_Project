@@ -1,5 +1,5 @@
 <div>
-  <button [routerLink]="['/inventory-page/location-form']" mat-flat-button color="primary" class="button-add-location">Create new list</button>
+  <button [routerLink]="['/inventory-page/location-form/']"  mat-flat-button color="primary" class="button-add-location">Create new list</button>
 </div>
 
 <cdk-virtual-scroll-viewport itemSize="100" class="location-viewport">
@@ -7,12 +7,5 @@
     <ng-container *ngFor="let lst of listMetadata">
       <pm-view-location-card *ngIf="listMetadata" [item]="lst"></pm-view-location-card>
     </ng-container>
-    <!--
-    <pm-view-location-card></pm-view-location-card>
-    <pm-view-location-card></pm-view-location-card>
-    <pm-view-location-card></pm-view-location-card>
-    <pm-view-location-card></pm-view-location-card>
-    <pm-view-location-card></pm-view-location-card>
-    -->
 </div>
 </cdk-virtual-scroll-viewport>

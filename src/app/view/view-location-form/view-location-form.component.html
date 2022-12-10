@@ -1,25 +1,25 @@
 <div class="location-form">
   <h1>Create a new list</h1>
 
-  <form class="location">
+  <form class="location" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
     <table class="location-full-width" cellspacing="0"><tr>
       <td><mat-form-field class="location-full-width">
-        <mat-label>First name</mat-label>
-        <input matInput>
+        <mat-label>List Name</mat-label>
+        <input matInput name="listName" [(ngModel)]="listName">
       </mat-form-field></td>
       <td><mat-form-field class="location-full-width">
-        <mat-label>Last name</mat-label>
-        <input matInput>
+        <mat-label>List ID</mat-label>
+        <input matInput name="listID" [(ngModel)]="listID">
       </mat-form-field></td>
     </tr></table>
 
 
     <mat-form-field class="location-full-width">
       <mat-label>Address</mat-label>
-      <textarea matInput></textarea>
+      <textarea matInput name="listAddress" [(ngModel)]="listAddress"></textarea>
     </mat-form-field>
 
     <button mat-raised-button color="primary" class="add-button" type="submit">Add</button>
-    <button [routerLink]="['/inventory-page/dashboard']" mat-raised-button color="warn" class="cancel-button">Cancel</button>
+    <button [routerLink]="['/inventory-page/list']" mat-raised-button color="warn" class="cancel-button" >Cancel</button>
   </form>
 </div>
