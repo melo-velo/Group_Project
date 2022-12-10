@@ -34,6 +34,8 @@ import { ViewListFormEditComponent } from './view/view-list-form-edit/view-list-
 import { AboutComponent } from './about/about.component';
 import { HomeCoverComponent } from './home-cover/home-cover.component';
 import { HomeOverviewComponent } from './home-overview/home-overview.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 const oktaConfig: OktaAuthOptions = {
   issuer: 'https://{dev-13798108.okta.com/oauth2/default}/oauth2/default',
@@ -62,6 +64,8 @@ const oktaConfig: OktaAuthOptions = {
     AboutComponent,
     HomeCoverComponent,
     HomeOverviewComponent,
+    QuestionsComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,
