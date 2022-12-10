@@ -1,0 +1,85 @@
+<div class="list-form-edit">
+  <h1>Edit your item</h1>
+  <table>
+    <tr>
+      <td>
+        <form class="list" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+          <table class="list-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Name</mat-label>
+                  <input matInput name="productName" [(ngModel)]="productName" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>ID</mat-label>
+                  <input matInput name="productId" [(ngModel)]="productId" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Price</mat-label>
+                  <input matInput name="purchasePrice" [(ngModel)]="purchasePrice" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Location</mat-label>
+                  <input matInput name="purchaseLocation" [(ngModel)]="purchaseLocation" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Date</mat-label>
+                  <input matInput name="datePurchased" [(ngModel)]="datePurchased" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Condition</mat-label>
+                  <input matInput name="condition" [(ngModel)]="condition" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
+                  <mat-label>Category</mat-label>
+                  <input matInput name="category" [(ngModel)]="category" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <input id="file-select-element" type="file" (change)="onChange($event)" name="bogusFormVar" [(ngModel)]="bogusFormVar" />
+              </td>
+            </tr>
+          </table>
+          <button mat-raised-button color="primary" class="add-button" type="submit">Edit</button>
+          <button mat-raised-button color="warn" class="cancel-button" (click)="onFormCancel()">Cancel</button>
+        </form>
+      </td>
+      <td>
+        <img id="item-pic" src="{{currentImage}}" />
+      </td>
+    </tr>
+  </table>

@@ -66,7 +66,18 @@
         "listname": "Dang-Home",
         "listaddress": "St Paul, MN",
         "coverimageurl": "",
-        "items": []
+        "items": [
+            {
+                "imageUrl": "",
+                "productName": "TV",
+                "productId": "1",
+                "purchasePrice": "300",
+                "purchaseLocation": "Best Buy",
+                "datePurchased": "01/01/2023",
+                "condition": "New",
+                "category": "Electronic"
+            }
+        ]
     },
     {
         "listid": 1,
@@ -79,6 +90,13 @@
         "listid": 10,
         "listname": "Guy-Test3",
         "listaddress": "Chatfield, Minnesota",
+        "coverimageurl": "",
+        "items": []
+    },
+    {
+        "listid": 3,
+        "listname": "Dang New Home",
+        "listaddress": "Dang New Address",
         "coverimageurl": "",
         "items": []
     }

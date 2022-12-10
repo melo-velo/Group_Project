@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import {PageInventoryComponent} from "./page-inventory/page-inventory.component";
 import {PageHomeComponent} from "./page-home/page-home.component";
+import {ViewLocationFormEditComponent} from "./view/view-location-form-edit/view-location-form-edit.component";
+import {ViewListFormEditComponent} from "./view/view-list-form-edit/view-list-form-edit.component";
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
@@ -25,7 +27,9 @@ const routes: Routes = [
       // {path: 'list', component: ViewItemComponent},
       {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}, pathMatch: "full"},
       {path: 'location-form', component: ViewLocationFormComponent},
+      {path: 'location-form-edit', component: ViewLocationFormEditComponent},
       {path: 'list-form/:listname', component: ViewListFormComponent, pathMatch: "full"},
+      {path: 'list-form-edit', component: ViewListFormEditComponent}
     ]
   },
 
