@@ -11,6 +11,8 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import {PageInventoryComponent} from "./page-inventory/page-inventory.component";
 import {PageHomeComponent} from "./page-home/page-home.component";
 import { AboutComponent } from './about/about.component';
+import {HomeCoverComponent} from "./home-cover/home-cover.component";
+import {HomeOverviewComponent} from "./home-overview/home-overview.component";
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
@@ -18,6 +20,8 @@ const routes: Routes = [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
       {path: 'about', component: AboutComponent },
+      {path: 'home-cover', component: HomeCoverComponent},
+      {path: 'home-overview', component: HomeOverviewComponent},
     ]
   },
 
