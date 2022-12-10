@@ -27,6 +27,9 @@ import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import { PageInventoryComponent } from './page-inventory/page-inventory.component';
 import { PageHomeComponent } from './page-home/page-home.component';
+import { AboutComponent } from './about/about.component';
+import { HomeCoverComponent } from './home-cover/home-cover.component';
+import { HomeOverviewComponent } from './home-overview/home-overview.component';
 
 
 @NgModule({
@@ -45,6 +48,9 @@ import { PageHomeComponent } from './page-home/page-home.component';
     CreateaccountComponent,
     PageInventoryComponent,
     PageHomeComponent,
+    AboutComponent,
+    HomeCoverComponent,
+    HomeOverviewComponent,
   ],
   imports: [
     BrowserModule,
