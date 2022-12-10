@@ -21,6 +21,8 @@ import {MatInputModule} from '@angular/material/input';
 import { ViewItemComponent } from './view/view-item/view-item.component';
 import {MatTableModule} from '@angular/material/table';
 import { ViewListFormComponent } from './view/view-list-form/view-list-form.component';
+import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
+import { OktaAuthOptions } from '@okta/okta-auth-js';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
@@ -33,6 +35,11 @@ import { AboutComponent } from './about/about.component';
 import { HomeCoverComponent } from './home-cover/home-cover.component';
 import { HomeOverviewComponent } from './home-overview/home-overview.component';
 
+const oktaConfig: OktaAuthOptions = {
+  issuer: 'https://{dev-13798108.okta.com/oauth2/default}/oauth2/default',
+  clientId: '{0oa7l1c04dPacXUdY5d7}',
+  redirectUri: window.location.origin + '/callback'
+};
 
 @NgModule({
   declarations: [
@@ -67,9 +74,14 @@ import { HomeOverviewComponent } from './home-overview/home-overview.component';
     MatInputModule,
     MatTableModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    OktaAuthModule
+
   ],
-  providers: [],
+  providers: [{ provide: OKTA_CONFIG, useValue: oktaConfig }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+
