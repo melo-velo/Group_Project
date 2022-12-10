@@ -12,12 +12,18 @@ import {PageInventoryComponent} from "./page-inventory/page-inventory.component"
 import {PageHomeComponent} from "./page-home/page-home.component";
 import {ViewLocationFormEditComponent} from "./view/view-location-form-edit/view-location-form-edit.component";
 import {ViewListFormEditComponent} from "./view/view-list-form-edit/view-list-form-edit.component";
+import { AboutComponent } from './about/about.component';
+import {HomeCoverComponent} from "./home-cover/home-cover.component";
+import {HomeOverviewComponent} from "./home-overview/home-overview.component";
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
     children: [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
+      {path: 'about', component: AboutComponent },
+      {path: 'home-cover', component: HomeCoverComponent},
+      {path: 'home-overview', component: HomeOverviewComponent},
     ]
   },
 

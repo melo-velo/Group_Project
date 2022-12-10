@@ -29,6 +29,9 @@ import { PageInventoryComponent } from './page-inventory/page-inventory.componen
 import { PageHomeComponent } from './page-home/page-home.component';
 import { ViewLocationFormEditComponent } from './view/view-location-form-edit/view-location-form-edit.component';
 import { ViewListFormEditComponent } from './view/view-list-form-edit/view-list-form-edit.component';
+import { AboutComponent } from './about/about.component';
+import { HomeCoverComponent } from './home-cover/home-cover.component';
+import { HomeOverviewComponent } from './home-overview/home-overview.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { ViewListFormEditComponent } from './view/view-list-form-edit/view-list-
     PageHomeComponent,
     ViewLocationFormEditComponent,
     ViewListFormEditComponent,
+    AboutComponent,
+    HomeCoverComponent,
+    HomeOverviewComponent,
   ],
   imports: [
     BrowserModule,
