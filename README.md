@@ -39,7 +39,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     npm install json-stringify-safe
 
 
-# Okta Configuration(MAC)
+## Okta Configuration(MAC)
 
 npm install @okta/okta-angular@3.0.1
 brew install --cask oktadeveloper/tap/okta 
