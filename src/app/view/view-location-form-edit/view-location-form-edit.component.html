@@ -1,0 +1,26 @@
+<div class="location-form-edit">
+  <h1>Edit your list</h1>
+
+  <form class="location" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+    <table class="location-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="location-full-width">
+        <mat-label>List Name</mat-label>
+        <input matInput name="listName" [(ngModel)]="listName">
+      </mat-form-field></td>
+      <td><mat-form-field class="location-full-width">
+        <mat-label>List ID</mat-label>
+        <input matInput name="listID" [(ngModel)]="listID">
+      </mat-form-field></td>
+    </tr></table>
+
+
+    <mat-form-field class="location-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matInput name="listAddress" [(ngModel)]="listAddress"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="add-button" type="submit">Edit</button>
+    <button [routerLink]="['/inventory-page/list']" mat-raised-button color="warn" class="cancel-button" >Cancel</button>
+  </form>
+</div>
+

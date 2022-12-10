@@ -13,7 +13,7 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell  *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
-        <button mat-raised-button class="edit-button" color="accent">Edit</button>
+        <button mat-raised-button [routerLink]="['/inventory-page/list-form-edit']" class="edit-button" color="accent">Edit</button>
         <button mat-raised-button class="delete-button" color="warn">Delete</button>
       </td>
     </ng-container>
