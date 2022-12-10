@@ -54,3 +54,4 @@ Redirect URI
 Enter your Redirect URI(s) [http://localhost:8080/callback]: http://localhost:4200/callback
 Enter your Post Logout Redirect URI(s) [http://localhost:4200/]: 
 Created OIDC application, client-id: 0oa7l1c04dPacXUdY5d7
+client: {orgUrl: 'https://dev-13798108.okta.com', token: 00rrymvSSDTqcQ0xZH7rigf_4Z8CKt46taSbOJwm_h}
