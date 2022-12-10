@@ -10,12 +10,15 @@ import { LoginComponent } from './login/login.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
 import {PageInventoryComponent} from "./page-inventory/page-inventory.component";
 import {PageHomeComponent} from "./page-home/page-home.component";
+import { OktaCallbackComponent } from '@okta/okta-angular';
+
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
     children: [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
+      { path: 'callback', component: OktaCallbackComponent }
     ]
   },
 

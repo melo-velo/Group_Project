@@ -12,6 +12,7 @@
         <input style="text-align:center" type="password" class="form-control" id="Password" placeholder="Password">
       </div>
       <br/>
-      <button [routerLink]="['/inventory-page']" style="text-align:center" type="submit" class="btn btn-primary">Log in</button>
+      <button [routerLink]="['/inventory-page']" style="text-align:center" 
+      mat-button *ngIf="!isAuthenticated" (click)="login()">Log in</button>
     </form>
   </div>
