@@ -22,6 +22,10 @@ html {
   padding: 0 8px;
 }
 
+.about {
+  padding: 20px;
+}
+
 .card {
   background-color: #00171f;
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -45,7 +49,7 @@ html {
 }
 
 .button:hover {
-  background-color: lightblue;
+  background-color: #007ea7;
 }
 
 @media screen and (max-width: 650px) {

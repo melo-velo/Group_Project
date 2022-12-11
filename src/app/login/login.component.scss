@@ -1,5 +1,27 @@
 form {
+  width: 700px;
   background-color: #00171f;
+  border: 1px solid #00171f;
+  border-radius: 10px;
+  padding: 10px;
 }
 
+article {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #00a8e8;
+  border-color: #00a8e8;
+}
+
+button:hover {
+  background-color: #007ea7;
+}
 

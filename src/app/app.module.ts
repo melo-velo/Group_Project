@@ -38,6 +38,8 @@ import { HomeCoverComponent } from './home-cover/home-cover.component';
 import { HomeOverviewComponent } from './home-overview/home-overview.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 const oktaConfig: OktaAuthOptions = {
   issuer: 'https://{dev-13798108.okta.com/oauth2/default}/oauth2/default',
@@ -83,6 +85,7 @@ const oktaConfig: OktaAuthOptions = {
     MatExpansionModule,
     AppRoutingModule,
     HttpClientModule,
+    MatGridListModule,
     OktaAuthModule,
   ],
   providers: [{ provide: OKTA_CONFIG, useValue: oktaConfig }],
