@@ -15,14 +15,14 @@ import {ViewListFormEditComponent} from "./view/view-list-form-edit/view-list-fo
 import { AboutComponent } from './about/about.component';
 import {HomeCoverComponent} from "./home-cover/home-cover.component";
 import {HomeOverviewComponent} from "./home-overview/home-overview.component";
-import { OktaCallbackComponent } from '@okta/okta-angular';
+import { OktaCallbackComponent} from '@okta/okta-angular';
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
     children: [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
-      {path: 'callback', component: OktaCallbackComponent },
+      {path: 'callback', component: OktaCallbackComponent},
       {path: 'about', component: AboutComponent },
       {path: 'home-cover', component: HomeCoverComponent},
       {path: 'home-overview', component: HomeOverviewComponent},
