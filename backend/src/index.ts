@@ -103,7 +103,7 @@ app.post('/', (req: any, res: any) => {
         default: {
             console.log("Unrecognized OpCode: " + newTransfer.opcode);
             res.status(404); // Deliberately chose 405 - Method Not Allowed
-            return res.json({ error: `unrecognized opcode:${newTransfer.opcode}.` });    
+            return res.json({ error: `unrecognized opcode:${newTransfer.opcode}.` });
         }
     }
 
@@ -111,6 +111,11 @@ app.post('/', (req: any, res: any) => {
 
     return res.sendStatus(200);
 });
+
+//TODO Put command for edits to existing list items
+
+//TODO Delete command to get rid of items
+
 
 // Start listening
 app.listen(port, () => {
