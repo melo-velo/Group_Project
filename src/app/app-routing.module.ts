@@ -18,6 +18,7 @@ import { HomeOverviewComponent } from "./home-overview/home-overview.component";
 import { OktaCallbackComponent } from '@okta/okta-angular';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { QuestionsComponent } from './questions/questions.component';
+import {ViewLocationFormEditResolver} from './view/view-location-form-edit/view-location-form-edit.resolver';
 
 const routes: Routes = [
   {path: 'home', component: PageHomeComponent,
@@ -39,7 +40,8 @@ const routes: Routes = [
       // {path: 'list', component: ViewItemComponent},
       {path: 'list/:listname', component: ViewItemComponent, resolve: {listData: ViewItemResolver}, pathMatch: "full"},
       {path: 'location-form', component: ViewLocationFormComponent},
-      {path: 'location-form-edit', component: ViewLocationFormEditComponent},
+      // {path: 'location-form-edit', component: ViewLocationFormEditComponent},
+      {path: 'location-form-edit/:listname', component: ViewLocationFormEditComponent, resolve: {listData: ViewLocationFormEditResolver}, pathMatch: "full"},
       {path: 'list-form/:listname', component: ViewListFormComponent, pathMatch: "full"},
       {path: 'list-form-edit', component: ViewListFormEditComponent}
     ]

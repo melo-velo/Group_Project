@@ -1,9 +1,9 @@
 <mat-card class="place-card">
   <mat-card-actions align="end">
-    <button mat-raised-button class="button-edit" [routerLink]="['/inventory-page/location-form-edit']">EDIT</button>
+    <button mat-raised-button class="button-edit" [routerLink]="['/inventory-page/location-form-edit/'+itemListName]">EDIT</button>
     <button mat-raised-button color="warn" class="button-delete">DELETE</button>
   </mat-card-actions>
-  <ng-template [ngIf]="itemUrl.length > 0" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock" ></ng-template>
+  <ng-template [ngIf]="itemUrl && itemUrl.length > 0" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock" ></ng-template>
   <ng-template #thenBlock>
     <img mat-card-image src="{{itemUrl}}" alt="">
   </ng-template>

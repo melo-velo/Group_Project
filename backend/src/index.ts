@@ -90,6 +90,16 @@ app.post('/', (req: any, res: any) => {
             lol.push(newTransfer.item as IList);
             break;
         }
+        case OpCodes.UpdateListMetaData:{
+            let subList:IList = lol.find(l => l.listname == newTransfer.listName) as IList;
+            let newList:IList = newTransfer.item as IList;
+
+            subList.listname = newList.listname;
+            subList.listid = newList.listid;
+            subList.listaddress = newList.listaddress;
+            subList.coverimageurl = newList.coverimageurl;
+            break;
+        }
         default: {
             console.log("Unrecognized OpCode: " + newTransfer.opcode);
             res.status(404); // Deliberately chose 405 - Method Not Allowed
