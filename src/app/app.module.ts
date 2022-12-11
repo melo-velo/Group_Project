@@ -42,10 +42,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 
 
 const oktaConfig: OktaAuthOptions = {
-  issuer: 'https://{dev-13798108.okta.com/oauth2/default}/oauth2/default',
-  clientId: '{0oa7l1c04dPacXUdY5d7}',
-  redirectUri: window.location.origin + '/callback'
+  issuer: 'https://dev-13798108.okta.com',
+  clientId: '0oa7l1c04dPacXUdY5d7',
+  redirectUri: 'http://localhost:4200/inventory-page'
 };
+
+
 
 @NgModule({
   declarations: [

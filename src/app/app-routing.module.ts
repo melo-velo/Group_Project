@@ -15,7 +15,7 @@ import { ViewListFormEditComponent } from "./view/view-list-form-edit/view-list-
 import { AboutComponent } from './about/about.component';
 import { HomeCoverComponent } from "./home-cover/home-cover.component";
 import { HomeOverviewComponent } from "./home-overview/home-overview.component";
-import { OktaCallbackComponent } from '@okta/okta-angular';
+import { OktaCallbackComponent} from '@okta/okta-angular';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { QuestionsComponent } from './questions/questions.component';
 import {ViewLocationFormEditResolver} from './view/view-location-form-edit/view-location-form-edit.resolver';
@@ -25,7 +25,7 @@ const routes: Routes = [
     children: [
       {path: 'login', component: LoginComponent},
       {path: 'createaccount', component: CreateaccountComponent},
-      {path: 'callback', component: OktaCallbackComponent },
+      {path: 'callback', component: OktaCallbackComponent},
       {path: 'about', component: AboutComponent },
       {path: 'home-cover', component: HomeCoverComponent},
       {path: 'home-overview', component: HomeOverviewComponent},
