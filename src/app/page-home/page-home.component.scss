@@ -1,10 +1,21 @@
+.login-container {
+  width: 180px;
+  margin-right: 10px;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin-left: 20px;
+}
+
 .nav-pills .active {
   background-color: #007ea7;
 }
 
 .btn-primary {
-  background-color: #00a8e8;;
-  border-color: #00a8e8;;
+  background-color: #00a8e8;
+  border-color: #00a8e8;
 }
 
 .btn-outline-primary {
@@ -19,3 +30,4 @@ button:hover {
 #home-header {
   background-color: transparent;
 }
+

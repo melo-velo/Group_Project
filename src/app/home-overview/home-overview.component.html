@@ -1,1 +1,49 @@
-<p>home-overview works!</p>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <div class="card" (click)="card1Clicked()" [@cardFlip]="card1.state">
+      <div class="face back">
+        <img src="assets/images/test-screenshot-1.png">
+      </div>
+      <div class="face front">
+        <h1>Have your own personal and secure account</h1>
+        <p>This is a paragraph.</p>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="card" (click)="card2Clicked()" [@cardFlip]="card2.state">
+      <div class="face back">
+        <img src="assets/images/test-screenshot-2.png">
+      </div>
+      <div class="face front">
+        <h1>All your locations in one place</h1>
+        <p>This is a paragraph.</p>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="card" (click)="card3Clicked()" [@cardFlip]="card3.state">
+      <div class="face back">
+        <img src="assets/images/test-screenshot-3.png">
+      </div>
+      <div class="face front">
+        <h1>Save all the items you want</h1>
+        <p>This is a paragraph.</p>
+      </div>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="card" (click)="card4Clicked()" [@cardFlip]="card4.state">
+      <div class="face back">
+        <img src="assets/images/test-screenshot-4.png">
+      </div>
+      <div class="face front">
+        <h1>Ease of use and search for items</h1>
+        <p>This is a paragraph.</p>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
