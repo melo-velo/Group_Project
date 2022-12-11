@@ -1,12 +1,12 @@
 [
     {
         "listid": 42,
-        "listname": "Guy-Home",
-        "listaddress": "Northfield, MN",
-        "coverimageurl": "assets/images/Martin.jpg",
+        "listname": "Instruments",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "assets/images/items/Martin.jpg",
         "items": [
             {
-                "imageUrl": "assets/images/Martin.jpg",
+                "imageUrl": "assets/images/items/Martin.jpg",
                 "productName": "Guitar",
                 "productId": "567-797372-IBN",
                 "purchasePrice": 400,
@@ -16,17 +16,93 @@
                 "category": "Instruments"
             },
             {
-                "imageUrl": "assets/images/bike.png",
-                "productName": "Bike",
-                "productId": "590-7943372-COL",
-                "purchasePrice": 2000,
-                "purchaseLocation": "Angry Catfish",
-                "datePurchased": "March 7, 2009",
-                "condition": "Used",
-                "category": "Sports Equipment"
+                "imageUrl": "assets/images/items/trumpet.jpg",
+                "productName": "Trumpet",
+                "productId": "Maa8vz6LlvPnR",
+                "purchasePrice": 3500,
+                "purchaseLocation": "Schimdt Music",
+                "datePurchased": "February 8, 2002",
+                "condition": "Poor",
+                "category": "Instruments"
             },
             {
-                "imageUrl": "assets/images/camera.jpg",
+                "imageUrl": "assets/images/items/keyboard.jpg",
+                "productName": "Keyboard",
+                "productId": "kMqbI8z48bWTj",
+                "purchasePrice": 895,
+                "purchaseLocation": "Reverb.com",
+                "datePurchased": "May 4, 2019",
+                "condition": "Good",
+                "category": "Instruments"
+            },
+            {
+                "imageUrl": "assets/images/items/violin.jpg",
+                "productName": "Violin",
+                "productId": "4Ku3gdnIG3zr9",
+                "purchasePrice": 20000,
+                "purchaseLocation": "Northfield",
+                "datePurchased": "August 28, 1999",
+                "condition": "Slightly Used",
+                "category": "Instruments"
+            }
+        ]
+    },
+    {
+        "listid": "23",
+        "listname": "Transportation",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "assets/images/items/transport.jpg",
+        "items": [
+            {
+                "imageUrl": "assets/images/items/Porsche.jpg",
+                "productName": "Car",
+                "productId": "uuIQ759UUJBw0",
+                "purchasePrice": 100000,
+                "purchaseLocation": "Germany",
+                "datePurchased": "October 3, 2016",
+                "condition": "Used",
+                "category": "Transportation"
+            },
+            {
+                "imageUrl": "assets/images/items/ebike.jpg",
+                "productName": "E-Bike",
+                "productId": "KOhy00IA7dayd",
+                "purchasePrice": 3500,
+                "purchaseLocation": "Perennial Cycle",
+                "datePurchased": "December 5, 2022",
+                "condition": "New",
+                "category": "Transportation"
+            },
+            {
+                "imageUrl": "assets/images/items/scooter.jpg",
+                "productName": "Scooter",
+                "productId": "rDYI6dboIRn8p",
+                "purchasePrice": 1500,
+                "purchaseLocation": "Target",
+                "datePurchased": "October 17, 2021",
+                "condition": "Used",
+                "category": "Transportation"
+            },
+            {
+                "imageUrl": "assets/images/items/vespa.jpg",
+                "productName": "Vespa",
+                "productId": "7reF3OxHeYRq0",
+                "purchasePrice": 5450,
+                "purchaseLocation": "Go Moto",
+                "datePurchased": "July 30, 2019",
+                "condition": "Good",
+                "category": "Transportation"
+            }
+        ]
+    },
+    {
+        "listid": "35",
+        "listname": "Technology",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "",
+        "items": [
+            {
+                "imageUrl": "assets/images/items/camera.jpg",
                 "productName": "Camera",
                 "productId": "780-73643012-UAD",
                 "purchasePrice": 785,
@@ -36,81 +112,145 @@
                 "category": "Electronics"
             },
             {
-                "imageUrl": "",
-                "productName": "Jedi",
-                "productId": "PR549",
-                "purchasePrice": "5k",
-                "purchaseLocation": "Northfield",
-                "datePurchased": "2/11/17",
-                "condition": "Slightly Used",
-                "category": "Working Dog"
+                "imageUrl": "assets/images/items/tv.jpg",
+                "productName": "Television",
+                "productId": "AuiDbZrUrRkxv",
+                "purchasePrice": 300,
+                "purchaseLocation": "Best Buy",
+                "datePurchased": "March 2, 2017",
+                "condition": "New",
+                "category": "Electronics"
+            },
+            {
+                "imageUrl": "assets/images/items/iphone.jpg",
+                "productName": "Cell Phone",
+                "productId": "dNWLktGb74QW8",
+                "purchasePrice": 1200,
+                "purchaseLocation": "Apple Store",
+                "datePurchased": "March 8, 2020",
+                "condition": "Used",
+                "category": "Electronics"
+            },
+            {
+                "imageUrl": "assets/images/items/computer.jpg",
+                "productName": "Laptop",
+                "productId": "UaoSvMDhz3QvV",
+                "purchasePrice": 3100,
+                "purchaseLocation": "Apple Store",
+                "datePurchased": "March 8, 2020",
+                "condition": "Used",
+                "category": "Electronics"
+            },
+            {
+                "imageUrl": "assets/images/items/watch.jpg",
+                "productName": "Watch",
+                "productId": "l3UTsr76FflGy",
+                "purchasePrice": 2791,
+                "purchaseLocation": "Rolex",
+                "datePurchased": "January 1, 2021",
+                "condition": "Lightly Used",
+                "category": "Electronics"
             }
         ]
     },
     {
-        "listid": "23",
-        "listname": "Noella-Home",
-        "listaddress": "St Paul, MN",
-        "coverimageurl": "",
-        "items": []
-    },
-    {
-        "listid": "35",
-        "listname": "Martin-Home",
-        "listaddress": "Woodbury, MN",
-        "coverimageurl": "",
-        "items": []
-    },
-    {
         "listid": "19",
-        "listname": "Dang-Home",
-        "listaddress": "St Paul, MN",
-        "coverimageurl": "",
+        "listname": "Furniture",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "assets/images/items/furniture.jpg",
         "items": [
             {
-                "imageUrl": "",
-                "productName": "TV",
-                "productId": "1",
-                "purchasePrice": "300",
-                "purchaseLocation": "Best Buy",
-                "datePurchased": "01/01/2023",
+                "imageUrl": "assets/images/items/couch.jpg",
+                "productName": "Couch",
+                "productId": "TDQ8Z86x1PoVo",
+                "purchasePrice": 500,
+                "purchaseLocation": "Goodwill",
+                "datePurchased": "November 14, 2015",
                 "condition": "New",
-                "category": "Electronic"
+                "category": "Furniture"
+            },
+            {
+                "imageUrl": "assets/images/items/bed.jpg",
+                "productName": "Bed",
+                "productId": "dNWLktGb74QW8",
+                "purchasePrice": 899,
+                "purchaseLocation": "Ikea",
+                "datePurchased": "May 3, 2016",
+                "condition": "Poor",
+                "category": "Furniture"
             }
         ]
     },
     {
         "listid": 1,
-        "listname": "Guy-Test2",
-        "listaddress": "Northfield, MN",
-        "coverimageurl": "",
-        "items": []
-    },
-    {
-        "listid": 10,
-        "listname": "Guy-Test3",
-        "listaddress": "Chatfield, Minnesota",
-        "coverimageurl": "",
-        "items": []
+        "listname": "Plants",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "assets/images/items/plants.jpg",
+        "items": [
+            {
+                "imageUrl": "assets/images/items/monstera.jpg",
+                "productName": "Monstera",
+                "productId": "lagBHJtyWAIKJ",
+                "purchasePrice": 110,
+                "purchaseLocation": "Mother Plant Co.",
+                "datePurchased": "November 16, 2017",
+                "condition": "Good",
+                "category": "Plants"
+            },
+            {
+                "imageUrl": "assets/images/items/cactus.jpg",
+                "productName": "Cactus",
+                "productId": "zHMsD0k2cFxz4",
+                "purchasePrice": 48,
+                "purchaseLocation": "Tangletown Gardens",
+                "datePurchased": "May 9, 2018",
+                "condition": "Good",
+                "category": "Plants"
+            }
+        ]
     },
     {
         "listid": 3,
-        "listname": "Dang New Home",
-        "listaddress": "Dang New Address",
-        "coverimageurl": "",
-        "items": []
+        "listname": "Sports",
+        "listaddress": "3417 Mountain Pass Drive, Boulder, Colorado",
+        "coverimageurl": "assets/images/items/sports.jpg",
+        "items": [
+            {
+                "imageUrl": "assets/images/items/bike.png",
+                "productName": "Bike",
+                "productId": "590-7943372-COL",
+                "purchasePrice": 2000,
+                "purchaseLocation": "Angry Catfish",
+                "datePurchased": "March 7, 2009",
+                "condition": "Used",
+                "category": "Sports Equipment"
+            },
+            {
+                "imageUrl": "assets/images/items/climbing.jpg",
+                "productName": "Climbing Shoes",
+                "productId": "HKaHZGInv0fen",
+                "purchasePrice": 200,
+                "purchaseLocation": "Vertical Endevours",
+                "datePurchased": "March 10, 2015",
+                "condition": "Used",
+                "category": "Sports Equipment"
+            },
+            {
+                "imageUrl": "assets/images/items/golf.jpg",
+                "productName": "Golf Clubs",
+                "productId": "SqE6URQvvDDjz",
+                "purchasePrice": 1000,
+                "purchaseLocation": "Golf Galaxy",
+                "datePurchased": "April 17, 2005",
+                "condition": "Used",
+                "category": "Sports Equipment"
+            }
+        ]
     },
     {
         "listid": 7,
-        "listname": "",
+        "listname": "Test1",
         "listaddress": "",
-        "coverimageurl": "",
-        "items": []
-    },
-    {
-        "listid": null,
-        "listname": null,
-        "listaddress": null,
         "coverimageurl": "",
         "items": []
     },

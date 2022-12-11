@@ -5,14 +5,16 @@
   </mat-card-actions>
   <ng-template [ngIf]="itemUrl && itemUrl.length > 0" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock" ></ng-template>
   <ng-template #thenBlock>
-    <img mat-card-image src="{{itemUrl}}" alt="">
+    <img mat-card-image src="{{itemUrl}}" alt="" [style.width.px]="imgWidth"
+    [style.margin.px]="imgMargin">
   </ng-template>
   <ng-template #elseBlock>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" [style.width.px]="imgWidth"
+    [style.margin.px]="imgMargin">
   </ng-template>
   <mat-card-content>
     <h1>{{locationName}}</h1>
-    <h2>{{address}}</h2>
+    <h5>{{address}}</h5>
   </mat-card-content>
   <mat-card-actions align="end">
     <button mat-raised-button color="primary" class="button-show" [routerLink]="['/inventory-page/list/'+itemListName]" routerLinkActive="active">SHOW LIST</button>
