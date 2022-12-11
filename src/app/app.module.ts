@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 import { ViewLocationComponent } from './view/view-location/view-location.component';
 import { ViewHeaderComponent } from './view/view-header/view-header.component';
 import { ViewSidebarComponent } from './view/view-sidebar/view-sidebar.component';
@@ -76,13 +77,13 @@ const oktaConfig: OktaAuthOptions = {
     ScrollingModule,
     MatSidenavModule,
     MatButtonModule,
+    MatSelectModule,
     MatInputModule,
     MatTableModule,
     MatExpansionModule,
     AppRoutingModule,
     HttpClientModule,
-    OktaAuthModule
-
+    OktaAuthModule,
   ],
   providers: [{ provide: OKTA_CONFIG, useValue: oktaConfig }],
   bootstrap: [AppComponent]

@@ -8,5 +8,4 @@ import { MatExpansionModule } from '@angular/material/expansion';
 })
 export class QuestionsComponent {
   panelOpenState = false;
-
 }

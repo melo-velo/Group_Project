@@ -1,1 +1,46 @@
-<p>Here is my first product review!</p>
+<div class="center">
+    <div class="row">
+        <h4>Review our Website!</h4>
+        <mat-form-field>
+            <mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let review of reviews" [value]="review.value">
+                        {{review.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-label>
+        </mat-form-field>
+    </div>
+</div>
+
+<br>
+<div class="center">
+    <div class="row">
+    <h3>Customer Reviews</h3>
+        <div class="card">
+            <div class="container">
+            <h2>John Smith</h2>
+            <img src="assets\images\team\john.jpg"
+            [style.width.px]="imgWidth"
+            [style.margin.px]="imgMargin">
+            <img src="assets\images\stars.jpg"
+            [style.width.px]="imgWidth"
+            [style.margin.px]="imgMargin">
+            <h5><i>Long-time corporate customer</i></h5>
+            <p class="small">I really like how easy the product is to use</p>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="container">
+        <h2>Caroline Johnson</h2>
+        <img src="assets\images\team\caroline.jpg"
+        [style.width.px]="imgWidth"
+        [style.margin.px]="imgMargin">
+        <img src="assets\images\stars.jpg"
+        [style.width.px]="imgWidth"
+        [style.margin.px]="imgMargin">
+        <h5><i>Independent customer</i></h5>
+        <p class="small">I like the help the company gave me setting up the product! </p>
+    </div>
+</div>
