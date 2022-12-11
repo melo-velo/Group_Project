@@ -1,4 +1,108 @@
-<div class="questions">
-    <h3><b>Insert question about website here?</b></h3>
-    <p>This is an answer to the question that was asked. </p>
+<div class="center">
+    <div class="row">
+        <div>
+            <h1>Frequently Asked Customer Support Questions</h1>
+            <mat-accordion>
+                <mat-expansion-panel hideToggle>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <b>Software Cost</b>
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            How much will the software cost?
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p>There is a free version for any user that creates an account
+                        but there will be a paid version for advanced features
+                    that costs $15 a month. </p>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                    (closed)="panelOpenState= false">
+                </mat-expansion-panel>
+                <br>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <b>Account Registration</b>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                How do I register my account?
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>You can use a valid email log in to create an account with us
+                            to access the website features. We promise not to share your
+                        data in any way with third parties.  </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState= false">
+                    </mat-expansion-panel>
+                    <br>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <b>Deals</b>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Are there any bulk deals for large companies?
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>We work with companies on a one-on-one basis to determine
+                            the best product fit, and work with our suppliers to provide
+                        the lowest cost experience that we can. </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState= false">
+                    </mat-expansion-panel>
+                    <br>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <b>General Support</b>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                I'm having issue with the software, who can I contact?
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>You can contact our onsite support team at any time at the
+                            following email address: ItemizeCompany@Gmail.com </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState= false">
+                    </mat-expansion-panel>
+                    <br>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <b>Troubleshooting</b>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                What if I accidentally delete all my data?
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>We store your data in the cloud. While we cannot directly
+                            view your data, we can retrieve previous versions of what you
+                        have saved in the event of accidental deletion or other event. </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState= false">
+                    </mat-expansion-panel>
+                    <br>
+                    <mat-expansion-panel hideToggle>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <b>General</b>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Where is the company located?
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>The company is team of distributed employees based out of Minnesota,
+                            but working accross the United States. </p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true"
+                                        (closed)="panelOpenState= false">
+                    </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
 </div>

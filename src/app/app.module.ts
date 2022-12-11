@@ -7,19 +7,20 @@ import { ItemListComponent } from './items/item-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { ViewLocationComponent } from './view/view-location/view-location.component';
 import { ViewHeaderComponent } from './view/view-header/view-header.component';
 import { ViewSidebarComponent } from './view/view-sidebar/view-sidebar.component';
 import { ViewLocationCardComponent } from './view/view-location-card/view-location-card.component';
 import { ViewHomeComponent } from './view/view-home/view-home.component';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatButtonModule} from '@angular/material/button';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
 import { ViewLocationFormComponent } from './view/view-location-form/view-location-form.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { ViewItemComponent } from './view/view-item/view-item.component';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ViewListFormComponent } from './view/view-list-form/view-list-form.component';
 import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 import { OktaAuthOptions } from '@okta/okta-auth-js';
@@ -77,6 +78,7 @@ const oktaConfig: OktaAuthOptions = {
     MatButtonModule,
     MatInputModule,
     MatTableModule,
+    MatExpansionModule,
     AppRoutingModule,
     HttpClientModule,
     OktaAuthModule
