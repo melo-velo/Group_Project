@@ -21,6 +21,10 @@ export interface IList {
 export enum OpCodes{
       AddItem = 1,
       AddList,
+      UpdateListMetaData,
+      UpdateListItem,
+      DeleteItem,
+      DeleteList
 };
 
 export interface IDataPacket {

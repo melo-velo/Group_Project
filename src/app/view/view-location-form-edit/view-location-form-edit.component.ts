@@ -14,10 +14,38 @@ export class ViewLocationFormEditComponent implements OnInit {
   public listName:string = "";
   public listID:number = 0;
   public listAddress:string = "";
+  public listCoverImage: string = "";
 
-  ngOnInit() {}
+  constructor (private route:ActivatedRoute,
+               private itemServ:ItemService,
+               private router:Router ){}
+  ngOnInit() {
+    let rawData:IList = JSON.parse(JSON.stringify(this.route.snapshot.data['listData'])) as IList;
 
-  onFormSubmit(ngForm:NgForm) {
+    this.listName = rawData.listname;
+    this.listID = rawData.listid;
+    this.listAddress = rawData.listaddress;
+    this.listCoverImage = rawData.coverimageurl;
+  }
 
+   // onFormSubmit(ngForm:NgForm) {
+   onFormSubmit() {
+    console.log("formSubmit event.");
+    let myList:IList = {
+      listid: this.listID,
+      listname: this.listName,
+      listaddress: this.listAddress,
+      coverimageurl: this.listCoverImage,
+      items: [],
+    } as IList;
+    
+    this.itemServ.updateListMetadata(myList);
+
+    this.router.navigate(['inventory-page/dashboard']);
+  }
+  onCancelClick()
+  {
+    console.log("Cancel clicked.");
+    this.router.navigate(['inventory-page/dashboard']);
   }
 }
