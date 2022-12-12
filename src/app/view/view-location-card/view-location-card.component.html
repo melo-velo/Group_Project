@@ -9,14 +9,14 @@
     [style.margin.px]="imgMargin">
   </ng-template>
   <ng-template #elseBlock>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="" [style.width.px]="imgWidth"
+    <img mat-card-image src="assets\images\placeholder-location.png" alt="" [style.width.px]="imgWidth"
     [style.margin.px]="imgMargin">
   </ng-template>
   <mat-card-content>
     <h1>{{locationName}}</h1>
     <h5>{{address}}</h5>
   </mat-card-content>
-  <mat-card-actions align="end">
+  <mat-card-actions class="action-bottom" align="end">
     <button mat-raised-button color="primary" class="button-show" [routerLink]="['/inventory-page/list/'+itemListName]" routerLinkActive="active">SHOW LIST</button>
   </mat-card-actions>
 </mat-card>
