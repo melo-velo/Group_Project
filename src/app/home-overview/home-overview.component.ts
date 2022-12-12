@@ -22,13 +22,13 @@ export interface OverviewCardData {
         transform: 'none'
       })),
       state('flipped', style({
-        transform: 'rotateY(180deg)'
+        transform: 'rotateX(180deg)'
       })),
       transition('default => flipped', [
-        animate('400ms')
+        animate('5ms')
       ]),
       transition('flipped => default', [
-        animate('200ms')
+        animate('2ms')
       ])
     ])
   ]
