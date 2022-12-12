@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-header.component.scss']
 })
 export class ViewHeaderComponent {
-  public userName: string = 'User Name';
+  public userName: string = 'kapp7944';
 }
