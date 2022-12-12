@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../items/item.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgForm } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { IItem } from '../../items/item';
 
 @Component({
@@ -24,7 +24,7 @@ export class ViewListFormComponent implements OnInit{
   public currentImage = "";
   private imgFileAsString: string = "";
   public itemID:number = Math.floor(Math.random() * 10000000)+5001;
-  
+
   private fileInput = document.querySelector('#file-select-element');
 
   constructor(private route: ActivatedRoute,
@@ -58,7 +58,7 @@ export class ViewListFormComponent implements OnInit{
   onFormSubmit(ngForm:NgForm)
   {
     let newItem:IItem = {
-      imageUrl: "assets/images/items/basketball.jpg", // this.currentImage,
+      imageUrl: `assets/images/items/${this.productName}.jpg`,
       productName: this.productName,
       productId: this.productId,
       purchasePrice: this.purchasePrice,
