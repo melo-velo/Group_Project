@@ -13,7 +13,7 @@ import { IItem, IList } from '../../items/item';
 export class ViewLocationFormComponent implements OnInit {
 
   public listName:string = "";
-  public listID:number = Math.floor(Math.random() * 10)+1;
+  public listID:number = Math.floor(Math.random() * 10000)+1;
   public listAddress:string = "";
 
   constructor(private itemServ:ItemService){}

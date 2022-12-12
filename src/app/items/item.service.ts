@@ -1,6 +1,5 @@
 import { Injectable, NgModule } from "@angular/core";
 import { IItem, IList, IDataPacket, OpCodes } from "../items/item";
-import list from '../../assets/json/list.json';
 import { HttpClient, HttpHeaders, HttpClientModule, HttpParams } from '@angular/common/http';
 import { getMultipleValuesInSingleSelectionError } from "@angular/cdk/collections";
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,19 +13,13 @@ export class ItemService {
  
   constructor(private http: HttpClient){}
 
-  // Legacy function, gets the initial JSON, will remove soon.
-  getItems(): IItem[] {
-  
-    /* work in progress, return the local file so we don't break the rest of the team */
-    let remoteList = this.http.request('get', this.url);
-    console.log(remoteList);
-  
-    return list;
-  }
   getListItems(listName:string) {
     console.log("getListItems: " + listName);
-    
     return this.http.get(this.url + '/' + listName);
+  }
+  getListItem(listName:string, itemID:number) {
+    console.log("getListItems: " + listName);
+    return this.http.get(this.url + '/' + listName + '/' + itemID);    
   }
 
   getListMetadata() {
@@ -47,6 +40,35 @@ export class ItemService {
 
     const data:IDataPacket = {
       opcode: OpCodes.AddItem,
+      user: USER_ID,
+      listName: listName,
+      item: newItem
+    }
+
+    this.http.post<any>(this.url, JSON.stringify(data), options)
+        .subscribe({
+          next: () => {
+            console.log("Call successful");
+          },
+          error: (err) => {
+            console.error("Error occurred: " + err);
+          }
+        });
+  }
+
+  updateListItem(listName:string, newItem:IItem)
+  {
+    let USER_ID = 'GLOBAL';
+
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
+
+    const data:IDataPacket = {
+      opcode: OpCodes.UpdateListItem,
       user: USER_ID,
       listName: listName,
       item: newItem
@@ -90,7 +112,7 @@ export class ItemService {
           }
         });
   }
-  
+
   updateListMetadata(listMD:IList){
     let USER_ID = 'GLOBAL';
 
