@@ -17,7 +17,7 @@
             <p><i>Martin co-founded the company in 2022.</i></p>
             <p>He currently leads development efforts and helps
               develop new products.</p>
-              <p class="small">Outside of work he like to: </p>
+              <p class="small">Outside of work he likes to: </p>
             <ul>
               <li class="small">Bike, play music, and rock climb</li>
               <li class="small">Play music</li>
@@ -73,20 +73,40 @@
     <div class="column">
         <div class="card">
           <div class="container">
-          <h5><i>Co-Founder & CEO - Chief Executive Officer</i></h5>
-          <h2>Team Member #4</h2>
-          <img src="assets\images\team\Developer_team.png"
+          <h2>Noellar Kappa</h2>
+          <h5><i>Engineer</i></h5>
+          <img src="assets\images\team\Noey.jpeg"
           [style.width.px]="imgWidth"
           [style.margin.px]="imgMargin">
-          <p><i>Decription of role at company here</i></p>
-            <p>Description of day-to-day activity</p>
-              <p class="small">Outside of work he/she/they like to: </p>
+          <p><i>Team Contributor</i></p>
+            <p>Data Analysis of Inventory</p>
+              <p class="small">Outside of work he/she/they like to:</p>
             <ul>
-              <li class="small">List what you like to do here</li>
+              <li class="small">Read</li>
+              <li class="small">Visit Museums</li>
+              <li class="small">Volunteer</li>
             </ul>
           </div>
-          <button class="button">Contact Info:</button>
+          <p class="small"><i>Email: kapp7944@stthomas.edu</i></p>
+            <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
       </div>
+          <h5><i>Co-Founder & Chief Engineer</i></h5>
+          <h2>Guy Lawrence</h2>
+          <img src="assets\images\team\Guy_Headshot.jpg"
+          [style.width.px]="imgWidth"
+          [style.margin.px]="imgMargin">
+          <p><i>Guy co-founded the company in 2022</i></p>
+            <p>He currently drives development, DevOps, and backend functionality.</p>
+              <p class="small">Outside of work he likes to: </p>
+            <ul>
+              <li class="small">Practice traditional karate</li>
+              <li class="small">Raise and show dogs</li>
+              <li class="small">Travel</li>
+            </ul>
+          </div>
+          <p class="small"><i>Email: lawr0015@stthomas.edu</i></p>
+        </div>
+        <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
     </div>
   </div>
 </div>

@@ -42,7 +42,7 @@ export class ItemListComponent implements OnInit {
   }*/
 
   ngOnInit(): void {
-    this.highValueItems = this.itemService.getItems();
-    this.filteredItems = this.highValueItems;
+//    this.highValueItems = this.itemService.getItems();
+//    this.filteredItems = this.highValueItems;
   }
 }
