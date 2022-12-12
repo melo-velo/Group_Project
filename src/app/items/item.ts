@@ -1,5 +1,4 @@
 export interface IItem {
-//      iid: string;
       imageUrl: string;
       productName: string;
       productId: string;
@@ -8,6 +7,7 @@ export interface IItem {
       datePurchased: string;
       condition: string;
       category: string;
+      iid: number;
 };
 
 export interface IList {
@@ -24,12 +24,13 @@ export enum OpCodes{
       UpdateListMetaData,
       UpdateListItem,
       DeleteItem,
-      DeleteList
+      DeleteList,
+      GetOneItem
 };
 
 export interface IDataPacket {
       opcode:OpCodes;
       user: string;
       listName: string;
-      item: IItem | IList;
+      item: IItem | IList | number;
 };

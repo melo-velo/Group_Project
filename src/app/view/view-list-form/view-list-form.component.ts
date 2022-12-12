@@ -23,7 +23,8 @@ export class ViewListFormComponent implements OnInit{
   public bogusFormVar: string = "";
   public currentImage = "";
   private imgFileAsString: string = "";
-
+  public itemID:number = Math.floor(Math.random() * 10000000)+5001;
+  
   private fileInput = document.querySelector('#file-select-element');
 
   constructor(private route: ActivatedRoute, 
@@ -57,7 +58,7 @@ export class ViewListFormComponent implements OnInit{
   onFormSubmit(ngForm:NgForm)
   {
     let newItem:IItem = {
-      imageUrl: "", // this.currentImage,
+      imageUrl: this.currentImage,
       productName: this.productName,
       productId: this.productId,
       purchasePrice: this.purchasePrice,
@@ -65,6 +66,7 @@ export class ViewListFormComponent implements OnInit{
       datePurchased: this.datePurchased,
       condition: this.condition,
       category: this.category,
+      iid: this.itemID
     };
     console.log("onFormSubmit(): " + JSON.stringify(newItem));
     this.itemServ.addItem(this.listName, newItem);
@@ -76,6 +78,9 @@ export class ViewListFormComponent implements OnInit{
     {
       imgElement.setAttribute('src',"");
     }
+
+    // Pick a new random ID
+    this.itemID = Math.floor(Math.random() * 10000000)+5001;
   }
   // Go back from whence we came
   onFormCancel(){

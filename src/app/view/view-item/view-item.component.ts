@@ -9,7 +9,7 @@ import { IList, IItem } from '../../items/item'
   styleUrls: ['./view-item.component.scss']
 })
 export class ViewItemComponent implements OnInit{
-  public displayedColumns: string[] = ['imageUrl', 'productName', 'productId', 'purchasePrice', 'purchaseLocation', 'datePurchased', 'condition', 'category', 'actions'];
+  public displayedColumns: string[] = ['imageUrl', 'productName', 'productId', 'purchasePrice', 'purchaseLocation', 'datePurchased', 'condition', 'category', 'actions', 'iid'];
   public dataSource = new MatTableDataSource<IItem>();
   public listName:string = "";
 
