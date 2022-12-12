@@ -55,6 +55,35 @@ export class ItemService {
           }
         });
   }
+
+  updateListItem(listName:string, newItem:IItem)
+  {
+    let USER_ID = 'GLOBAL';
+
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
+
+    const data:IDataPacket = {
+      opcode: OpCodes.UpdateListItem,
+      user: USER_ID,
+      listName: listName,
+      item: newItem
+    }
+
+    this.http.post<any>(this.url, JSON.stringify(data), options)
+        .subscribe({
+          next: () => {
+            console.log("Call successful");
+          },
+          error: (err) => {
+            console.error("Error occurred: " + err);
+          }
+        });
+  }
   
   createNewList( listName:IList ){
     let USER_ID = 'GLOBAL';

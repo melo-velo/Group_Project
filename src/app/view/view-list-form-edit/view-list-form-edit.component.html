@@ -3,7 +3,7 @@
   <table>
     <tr>
       <td>
-        <form class="list" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+        <form class="list">
           <table class="list-full-width" cellspacing="0">
             <tr>
               <td>
@@ -83,7 +83,7 @@
               </td>
             </tr>
           </table>
-          <button mat-raised-button color="primary" class="add-button" type="submit">Edit</button>
+          <button mat-raised-button color="primary" class="add-button" (click)="onFormSubmit()">Save</button>
           <button mat-raised-button color="warn" class="cancel-button" (click)="onFormCancel()">Cancel</button>
         </form>
       </td>

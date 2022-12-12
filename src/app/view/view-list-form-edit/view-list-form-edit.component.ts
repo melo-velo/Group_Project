@@ -27,12 +27,17 @@ export class ViewListFormEditComponent implements OnInit{
   private listName:string = "";
   private fileInput = document.querySelector('#file-select-element');
 
-  constructor(private route:ActivatedRoute) {}
+  constructor(private route:ActivatedRoute, 
+              private itemServ:ItemService,
+              private myRouter: Router) {}
 
   ngOnInit() {
     console.log("view-list-form-edit:onNgInit() snapshot.data: " + JSON.stringify(this.route.snapshot.data));
-    let myItem:IItem = JSON.parse(JSON.stringify(this.route.snapshot.data['itemData']));
+    
+    this.listName = this.route.snapshot.data['itemData']['Name'];
+    console.log("listName: " + this.listName);
 
+    let myItem:IItem = JSON.parse(JSON.stringify(this.route.snapshot.data['itemData']['data']));
     console.log("myItem: " + JSON.stringify(myItem));
 
     this.currentImage = myItem.imageUrl;
@@ -46,15 +51,41 @@ export class ViewListFormEditComponent implements OnInit{
     this.itemID = myItem.iid;
   };
 
-  onFormSubmit(ngForm:NgForm) {
+  // When the save button is clicked
+  onFormSubmit() {
+    let myItem:IItem = {
+      imageUrl: this.currentImage, 
+      productName: this.productName,
+      productId: this.productId,
+      purchasePrice: this.purchasePrice,
+      purchaseLocation: this.purchaseLocation,
+      datePurchased: this.datePurchased,
+      condition: this.condition,
+      category: this.category,
+      iid: this.itemID
+    } as IItem;
 
+    this.itemServ.updateListItem(this.listName, myItem);
+    this.myRouter.navigate(['inventory-page/list/' + this.listName]);
   };
 
-  onChange(event:any) {
-
-  };
-
+  // When the cancel button is clicked
   onFormCancel(){
+    this.myRouter.navigate(['inventory-page/list/' + this.listName]);
+  }
 
+  // On file Select
+  onChange(event:any) {
+    let imgElement:HTMLImageElement = document.querySelector('img') as HTMLImageElement;
+    if (imgElement)
+    {
+      // Convert the image to a base64 string for transport to the backend
+      let reader = new FileReader();
+      reader.addEventListener("loadend", (ev) => {
+        this.currentImage = reader.result as string;
+      }, false);
+
+      reader.readAsDataURL(event.target.files[0]);
+    }
   }
 }

@@ -92,7 +92,8 @@ app.get('/:listname/:itemid', (req: any, res: any) => {
             let item = subList.items.find(i => i.iid == req.params.itemid);
             res.status(200);
             console.log("Returning " + JSON.stringify(item).slice(0,25));
-            return res.json(item);
+//            return res.json(item);
+            return res.json({"Name":req.params.listname,"data":item});
         }
     }
     console.log("Returning 404 error.");
@@ -153,13 +154,22 @@ app.post('/', (req: any, res: any) => {
             subList.coverimageurl = newList.coverimageurl;
             break;
         }
-        case OpCodes.GetOneItem: {
+        case OpCodes.UpdateListItem: {
             let subList:IList = lol.find(l => l.listname == newTransfer.listName) as IList;
-            let item:IItem = subList.items.find(i => i.iid == newTransfer.item) as IItem;
+            let updatedItem:IItem = newTransfer.item as IItem;
+            let item:IItem = subList.items.find(i => i.iid == updatedItem.iid) as IItem;
 
-            // Retunring here is fine since we don't need to write the list out
-            res.status(200);
-            return res.json(item);
+            if (subList && item)
+            {
+                let index:number = subList.items.indexOf(item);
+                subList.items[index] = updatedItem;
+            }
+            else
+            {
+                console.log("Item or List not found: " + JSON.stringify(newTransfer.item));
+                res.status(404); // Deliberately chose 405 - Method Not Allowed
+                return res.json({ error: `Item or List not found:${newTransfer.listName} ${newTransfer.item}.` });    
+            }
             break;
         }
 
