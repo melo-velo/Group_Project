@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Injectable } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { IList } from "../../items/item";
+import { ItemService } from '../../items/item.service';
 
 @Component({
   selector: 'pm-view-location-card',
@@ -21,7 +22,7 @@ export class ViewLocationCardComponent implements OnInit{
   imgWidth = 150;
   imgMargin = 6;
 
-  constructor(private myRouter:Router) {}
+  constructor(private myRouter:Router, private itemServ:ItemService,) {}
 
   ngOnInit(){
     console.log("view-location-card NgOnInit()");
@@ -34,8 +35,13 @@ export class ViewLocationCardComponent implements OnInit{
     }
   }
 
-//  OnShowList(){
-//    console.log("OnShowList() navigating too: list/"+this.itemListName);
-//    this.myRouter.navigate(['list/'+this.itemListName]);
-//  }
+  onClickDelete(){
+    console.log("loc-card OnClickDelete ");
+    this.itemServ.deleteList(this.itemListName);
+
+    this.myRouter.navigate(['/inventory-page/list/' + this.itemListName]);
+
+    // Hit it with the BFH because router.navigate() wasn't enough
+    window.location.reload();
+  }
 }

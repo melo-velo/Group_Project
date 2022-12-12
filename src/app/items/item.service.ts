@@ -1,8 +1,6 @@
-import { Injectable, NgModule } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { IItem, IList, IDataPacket, OpCodes } from "../items/item";
-import { HttpClient, HttpHeaders, HttpClientModule, HttpParams } from '@angular/common/http';
-import { getMultipleValuesInSingleSelectionError } from "@angular/cdk/collections";
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -141,14 +139,34 @@ export class ItemService {
         });
   }
 
-  //  getItem(/* listName:IList,*/ id:string){}
+  deleteListItem(listName:string, itemID:number)
+  {
+    console.log("itemTS:deleteListItem()");
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
 
-  //  updateItem(/* listName:IList,*/ id:string){}
-  
+    console.log("itemTS:delete() " + this.url + '/' + listName + '/' + itemID);
+    return this.http.delete(this.url + '/' + listName + '/' + itemID, options).subscribe(data => {
+      console.log(data);
+      }); 
+  }
+  deleteList(listName:string)
+  {
+    console.log("itemTS:deleteList()");
+    const options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }),
+    };
 
-  //  deleteItem(/* listName:IList,*/ id:string){}
-
-  //  deleteList(listName:IList){}
-
-
+    console.log("itemTS:delete() " + this.url + '/' + listName);
+    return this.http.delete(this.url + '/' + listName, options).subscribe(data => {
+      console.log(data);
+      }); 
+  }
 }
