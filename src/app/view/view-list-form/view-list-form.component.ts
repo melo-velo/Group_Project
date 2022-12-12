@@ -27,8 +27,8 @@ export class ViewListFormComponent implements OnInit{
   
   private fileInput = document.querySelector('#file-select-element');
 
-  constructor(private route: ActivatedRoute, 
-              private itemServ:ItemService, 
+  constructor(private route: ActivatedRoute,
+              private itemServ:ItemService,
               private http: HttpClient,
               private myRouter: Router) {}
 
@@ -58,7 +58,7 @@ export class ViewListFormComponent implements OnInit{
   onFormSubmit(ngForm:NgForm)
   {
     let newItem:IItem = {
-      imageUrl: this.currentImage,
+      imageUrl: "assets/images/items/basketball.jpg", // this.currentImage,
       productName: this.productName,
       productId: this.productId,
       purchasePrice: this.purchasePrice,
