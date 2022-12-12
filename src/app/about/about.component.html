@@ -30,43 +30,6 @@
     <div class="column">
       <div class="card">
         <div class="container">
-          <h2>Dang Dang</h2>
-          <h5><i>Co-Founder & Chief Front End Developer</i></h5>
-          <img src="assets\images\team\Developer_team.png" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
-          <p><i>Dang co-founded the company.</i></p>
-          <p>He helps design and develop products' UI.</p>
-          <p class="small">Outside of work he/she/they like to: </p>
-          <ul>
-            <li class="small">Go to the gym</li>
-            <li class="small">Eat good food</li>
-            <li class="small">Watch movies</li>
-          </ul>
-          <p class="small"><i>Email: dang1840@stthomas.edu</i></p>
-        </div>
-        <button class="button">Contact Info:</button>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <div class="container">
-          <h2>Team Member #3</h2>
-          <h5><i>Co-Founder & COO - Chief Operating Officer</i></h5>
-          <img src="assets\images\team\Developer_team.png" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
-          <p><i>Decription of role at company here</i></p>
-          <p>Description of day-to-day activity</p>
-          <p class="small">Outside of work he/she/they like to: </p>
-          <ul>
-            <li class="small">List what you like to do here</li>
-          </ul>
-        </div>
-        <button class="button">Contact Info:</button>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <div class="container">
           <h2>Noellar Kappa</h2>
           <h5><i>Engineer</i></h5>
           <img src="assets\images\team\Noey.jpeg" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
@@ -82,19 +45,47 @@
         <p class="small"><i>Email: kapp7944@stthomas.edu</i></p>
         <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
       </div>
-      <h5><i>Co-Founder & Chief Engineer</i></h5>
-      <h2>Guy Lawrence</h2>
-      <img src="assets\images\team\Guy_Headshot.jpg" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
-      <p><i>Guy co-founded the company in 2022</i></p>
-      <p>He currently drives development, DevOps, and backend functionality.</p>
-      <p class="small">Outside of work he likes to: </p>
-      <ul>
-        <li class="small">Practice traditional karate</li>
-        <li class="small">Raise and show dogs</li>
-        <li class="small">Travel</li>
-      </ul>
     </div>
-    <p class="small"><i>Email: lawr0015@stthomas.edu</i></p>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Guy Lawrence</h2>
+          <h5><i>Co-Founder & Chief Engineer</i></h5>
+          <img src="assets\images\team\Guy_Headshot.jpg" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
+          <p><i>Guy co-founded the company in 2022</i></p>
+          <p>He currently drives development, DevOps, and backend functionality.</p>
+          <p class="small">Outside of work he likes to: </p>
+          <ul>
+            <li class="small">Practice traditional karate</li>
+            <li class="small">Raise and show dogs</li>
+            <li class="small">Travel</li>
+          </ul>
+        </div>
+        <p class="small"><i>Email: lawr0015@stthomas.edu</i></p>
+        <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Dang Dang</h2>
+          <h5><i>Co-Founder & Chief Front End Developer</i></h5>
+          <img src="assets\images\team\Developer_team.png" [style.width.px]="imgWidth" [style.margin.px]="imgMargin">
+          <p><i>Dang co-founded the company.</i></p>
+          <p>He helps design and develop products' UI.</p>
+          <p class="small">Outside of work he likes to: </p>
+          <ul>
+            <li class="small">Go to the gym</li>
+            <li class="small">Eat good food</li>
+            <li class="small">Watch movies</li>
+          </ul>
+        </div>
+          <p class="small"><i>Email: dang1840@stthomas.edu</i></p>
+          <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
+      </div>
+    </div>
+
   </div>
-  <a [href]="getEmailStrings([assets[0]], subjectLine)"><button class="button">Contact Info:</button></a>
 </div>
