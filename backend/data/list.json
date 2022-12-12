@@ -260,5 +260,12 @@
         "listaddress": null,
         "coverimageurl": "",
         "items": []
+    },
+    {
+        "listid": 8,
+        "listname": "Dang Game Room",
+        "listaddress": "Dang house address",
+        "coverimageurl": "",
+        "items": []
     }
 ]
