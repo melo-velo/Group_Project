@@ -8,6 +8,15 @@
             <tr>
               <td>
                 <mat-form-field class="list-full-width">
+                  <mat-label>Unique ID</mat-label>
+                  <input matInput readonly name="itemID" [(ngModel)]="itemID" />
+                </mat-form-field>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <mat-form-field class="list-full-width">
                   <mat-label>Name</mat-label>
                   <input matInput name="productName" [(ngModel)]="productName" />
                 </mat-form-field>
