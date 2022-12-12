@@ -35,7 +35,12 @@ mat-grid-tile {
 }
 
 .front {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
   text-align: center;
   padding: 70px 0;
+}
+
+.front-image {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
